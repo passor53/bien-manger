@@ -1,9 +1,13 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav id="nav">
+    <router-link to="/">Accueil</router-link> |
+    <router-link to="/about">A Propos</router-link> |
+    <router-link to="/recipe">Recettes</router-link> |
+    <router-link to="/tip">Astuces</router-link> |
+    <router-link to="/Menu">Menus</router-link>
   </nav>
-  <router-view/>
+  <router-view />
+
 </template>
 
 <style>
@@ -15,16 +19,17 @@
   color: #2c3e50;
 }
 
-nav {
+#nav {
   padding: 30px;
+  border: solid 2px black;
 }
 
-nav a {
+#nav a {
   font-weight: bold;
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
+#nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
