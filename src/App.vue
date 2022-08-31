@@ -1,10 +1,10 @@
 <template>
   <nav id="nav">
     <router-link to="/">Accueil</router-link> |
-    <router-link to="/about">A Propos</router-link> |
     <router-link to="/recipe">Recettes</router-link> |
     <router-link to="/tip">Astuces</router-link> |
-    <router-link to="/Menu">Menus</router-link>
+    <router-link to="/Menu">Menus</router-link> |
+    <router-link to="/about">A Propos</router-link>
   </nav>
   <router-view />
 
