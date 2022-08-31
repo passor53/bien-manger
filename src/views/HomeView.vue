@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Bienvenu sur le projet commun de Paco et Florian." />
+    <img alt="Vue logo" src="../assets/Bien-Manger.jpg">
+    <HelloWorld msg="Bienvenu sur notre site : Bien-Manger" />
   </div>
 </template>
 
