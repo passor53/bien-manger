@@ -11,13 +11,13 @@
             <!-- <input type="button" @click="addRecipe" value="Ajouter une recette"> -->
             <input type="button" @click="goToPage" value="Retour">
         </div>
+        <div id="step">
+            <h3>ETAPE</h3>
+        </div>
+        <footer id="footer">
+            Pied de page
+        </footer>
     </div>
-    <div id="step">
-        <h3>ETAPE</h3>
-    </div>
-    <footer id="footer">
-        Pied de page
-    </footer>
 </template>
 
 
