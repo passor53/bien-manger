@@ -22,19 +22,19 @@
     but hey, it's pure CSS magic.
     -->
       <ul id="menu">
-        <a href="#">
+        <a href="/">
           <li>Accueil</li>
         </a>
-        <a href="#">
+        <a href="/recipe">
           <li>Recettes</li>
         </a>
-        <a href="#">
+        <a href="/tip">
           <li>Menus</li>
         </a>
-        <a href="#">
+        <a href="/menu">
           <li>Astuces</li>
         </a>
-        <a href="#">
+        <a href="/about">
           <li>A Propos</li>
         </a>
       </ul>
@@ -195,15 +195,6 @@ body {
   text-align: center;
   color: #C3d898
 }
-
-/*#nav {
-
-
-
-  /*padding: 30px;
-  border: solid 1px #C3D898;
-  background-color: #C3D898;
-}*/
 
 #nav a {
   font-weight: bold;
