@@ -196,14 +196,14 @@ body {
   color: #C3d898
 }
 
-#nav {
+/*#nav {
 
 
 
   /*padding: 30px;
   border: solid 1px #C3D898;
-  background-color: #C3D898;*/
-}
+  background-color: #C3D898;
+}*/
 
 #nav a {
   font-weight: bold;
