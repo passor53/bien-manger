@@ -41,6 +41,12 @@
                 </ul>
             </div>
         </nav>
+        <div class="logo-user">
+            <p>Logo du Site</p>
+        </div>
+        <div class="logo-site">
+            <p>Logo Utilisateur</p>
+        </div>
     </div>
     <router-view />
 
@@ -53,11 +59,30 @@ export default {
     
 
 <style scoped>
+#block-header {
+    width: 100vw;
+    height: 15vh;
+}
+
+p {
+    color: #C3d898;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #596f62;
+
+}
+
 #menuToggle {
     display: block;
     position: relative;
-    top: 50px;
-    left: 50px;
+    top: 0;
+    left: 6vw;
 
     z-index: 1;
 
@@ -199,5 +224,17 @@ export default {
 
 #nav a.router-link-exact-active {
     color: #42b983;
+}
+
+.logo-user {
+    border: solid 1px none;
+    width: 33vw;
+    height: 15vh;
+}
+
+.logo-site {
+    border: solid 1px none;
+    width: 33vw;
+    height: 15vh;
 }
 </style>

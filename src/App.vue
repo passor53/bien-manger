@@ -29,11 +29,10 @@ body {
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
-#block-header {
-  border: solid 1px blue;
-}
+
 
 h1 {
-  color: #7ea16b;
+  margin-top: 5vh;
+  color: #c3d898;
 }
 </style>
