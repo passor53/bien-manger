@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import RecipeView from '../views/RecetteView.vue'
 import TipView from '../views/TipView.vue'
 import MenuView from '../views/MenuView.vue'
+import RecipesView from '../views/LesRecettesView.vue'
 
 const routes = [
   {
@@ -10,11 +11,18 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
   {
     path: '/about',
     name: 'about',
 
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+
+  {
+    path: '/recipes',
+    name: 'recipes',
+    component: RecipesView
   },
 
   {
@@ -37,7 +45,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory("/"), //process.env.BASE_URL
   routes
 })
 
