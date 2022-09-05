@@ -4,7 +4,7 @@
     </div>
     <div class="blockImage">
         <div class="cell">
-
+            <Router-Link to="/recipe">Voir recette</Router-Link>
         </div>
         <br>
         <div class="cell">
