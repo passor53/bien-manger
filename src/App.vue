@@ -1,6 +1,8 @@
 <template lang="fr">
   <div id="block-header">
     <AppHeader />
+    <router-view />
+    <AppFooter />
   </div>
 </template>
 
