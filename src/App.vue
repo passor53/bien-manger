@@ -1,6 +1,7 @@
 <template lang="fr">
   <div id="block-header">
     <AppHeader />
+    <AppFooter />
   </div>
 </template>
 
@@ -8,12 +9,14 @@
 
 // @ is an alias to /src
 import AppHeader from '@/components/AppHeader.vue'
+import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   name: 'App.vue',
   components: {
-    AppHeader
-  }
+    AppHeader,
+    AppFooter
+  },
 }
 </script>
 
@@ -24,15 +27,21 @@ body {
   padding: 0;
 
   /* make it look decent enough */
-  background: #1c3144;
+  background: #370617;
   color: black;
   font-family: "Avenir Next", "Avenir", sans-serif;
+  text-align: center;
 }
 
 
 
 h1 {
   margin-top: 5vh;
-  color: #c3d898;
+  color: #ffba08;
+}
+
+p {
+  color: #f48c06;
+  padding: 0 3vw 0 3vw;
 }
 </style>

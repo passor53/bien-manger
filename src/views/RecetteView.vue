@@ -22,9 +22,6 @@
     <div id="step">
         <h3>ETAPE</h3>
     </div>
-    <footer id="footer">
-        Pied de page
-    </footer>
 </template>
 
 <script>

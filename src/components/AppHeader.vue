@@ -26,6 +26,9 @@
                     <a href="/">
                         <li>Accueil</li>
                     </a>
+                    <a href="/login">
+                        <li>Connection</li>
+                    </a>
                     <a href="/recipes">
                         <li>Recettes</li>
                     </a>
@@ -41,11 +44,9 @@
                 </ul>
             </div>
         </nav>
-        <div class="logo-user">
-            <p>Logo du Site</p>
-        </div>
-        <div class="logo-site">
-            <p>Logo Utilisateur</p>
+        <div class="bpseudo">
+            <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg">
+            <p class="ppseudo">Pseudo</p>
         </div>
     </div>
     <router-view />
@@ -60,8 +61,31 @@ export default {
 
 <style scoped>
 #block-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     width: 100vw;
     height: 15vh;
+}
+
+.bpseudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ppseudo {
+    padding-right: 1vw;
+}
+
+.logos {}
+
+.logo-user {
+    max-width: 14vw;
+    max-height: 9vh;
+    width: 14vw;
+    height: 9vh;
 }
 
 p {
@@ -74,7 +98,7 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #596f62;
+    background-color: #6a040f;
 
 }
 

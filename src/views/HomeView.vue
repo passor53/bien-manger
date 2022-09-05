@@ -1,8 +1,10 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/Bien-Manger.jpg">
-    <HelloWorld msg="Bienvenu sur notre site : Bien-Manger" />
+    <HelloWorld msg="Le site de référence pour partager ses recettes" />
+    <Router-Link to="/login">login</Router-Link> <!-- | -->
   </div>
+
 </template>
 
 <script>
@@ -18,15 +20,8 @@ export default {
 </script>
 
 <style scoped>
-img {
-  width: 75vw;
-  height: 45vh;
-}
-
 .home {
   margin-top: 5vh;
   text-align: center;
 }
-
-
 </style>
