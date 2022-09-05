@@ -39,6 +39,15 @@ h1 {
   color: #ffba08;
 }
 
+h2 {
+  color: #ffba08;
+  ;
+}
+
+ul {
+  color: #f48c06;
+}
+
 p {
   color: #f48c06;
   padding: 0 3vw 0 3vw;
