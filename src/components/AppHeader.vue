@@ -26,6 +26,9 @@
                     <a href="/">
                         <li>Accueil</li>
                     </a>
+                    <a href="/login">
+                        <li>Connection</li>
+                    </a>
                     <a href="/recipes">
                         <li>Recettes</li>
                     </a>
@@ -41,6 +44,10 @@
                 </ul>
             </div>
         </nav>
+        <div class="bpseudo">
+            <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg">
+            <p class="ppseudo">Pseudo</p>
+        </div>
     </div>
 
 </template>
@@ -52,11 +59,53 @@ export default {
     
 
 <style scoped>
+#block-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 15vh;
+}
+
+.bpseudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ppseudo {
+    padding-right: 1vw;
+}
+
+.logos {}
+
+.logo-user {
+    max-width: 14vw;
+    max-height: 9vh;
+    width: 14vw;
+    height: 9vh;
+}
+
+p {
+    color: #C3d898;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6a040f;
+
+}
+
 #menuToggle {
     display: block;
     position: relative;
-    top: 50px;
-    padding-left: 50px;
+    top: 0;
+    padding-left: 6vw;
 
     z-index: 1;
 
@@ -198,5 +247,17 @@ export default {
 
 #nav a.router-link-exact-active {
     color: #42b983;
+}
+
+.logo-user {
+    border: solid 1px none;
+    width: 33vw;
+    height: 15vh;
+}
+
+.logo-site {
+    border: solid 1px none;
+    width: 33vw;
+    height: 15vh;
 }
 </style>

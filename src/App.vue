@@ -17,7 +17,7 @@ export default {
   components: {
     AppHeader,
     AppFooter
-  }
+  },
 }
 </script>
 
@@ -28,16 +28,21 @@ body {
   padding: 0;
 
   /* make it look decent enough */
-  background: #1c3144;
+  background: #370617;
   color: black;
   font-family: "Avenir Next", "Avenir", sans-serif;
+  text-align: center;
 }
 
-#block-header {
-  border: solid 1px blue;
-}
+
 
 h1 {
-  color: #7ea16b;
+  margin-top: 5vh;
+  color: #ffba08;
+}
+
+p {
+  color: #f48c06;
+  padding: 0 3vw 0 3vw;
 }
 </style>

@@ -1,4 +1,3 @@
-
 <template>
     <div class="blockRecipeImage">
         <h1 class="nameRecipe">Les recettes</h1>
