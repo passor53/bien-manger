@@ -1,14 +1,15 @@
 <template>
     <div class="blockImage">
         <div class="cell">
-
+            <p>Entrée</p>
         </div>
         <br>
         <div class="cell">
-
+            <p>Plat</p>
         </div>
         <br>
         <div class="cell">
+            <p>Dessert</p>
         </div>
     </div>
 </template>
@@ -18,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .blockImage {
     display: flex;
     flex-wrap: wrap;
@@ -34,9 +35,21 @@ export default {
     border: 1px solid whitesmoke;
 }
 
+/* p .entry {
+    border: 2px solid black;
+    position: fixed;
+} */
+
 @media screen and (max-width: 1024px) {
     .cell {
         margin: 1em auto;
     }
+}
+
+p {
+    border-bottom: solid 1px white;
+    background-color: black;
+    /* opacity: 50%; */
+    color: white;
 }
 </style>
