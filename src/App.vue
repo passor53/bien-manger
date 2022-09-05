@@ -8,11 +8,13 @@
 
 // @ is an alias to /src
 import AppHeader from '@/components/AppHeader.vue'
+import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   name: 'App.vue',
   components: {
-    AppHeader
+    AppHeader,
+    AppFooter
   }
 }
 </script>
