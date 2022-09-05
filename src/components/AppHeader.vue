@@ -32,10 +32,10 @@
                     <a href="/recipes">
                         <li>Recettes</li>
                     </a>
-                    <a href="/tip">
+                    <a href="/menu">
                         <li>Menus</li>
                     </a>
-                    <a href="/menu">
+                    <a href="/tip">
                         <li>Astuces</li>
                     </a>
                     <a href="/about">

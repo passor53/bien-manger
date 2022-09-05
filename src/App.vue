@@ -34,8 +34,6 @@ body {
   text-align: center;
 }
 
-
-
 h1 {
   margin-top: 5vh;
   color: #ffba08;
