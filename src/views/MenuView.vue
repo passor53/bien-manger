@@ -1,7 +1,9 @@
 <template>
     <div class="blockImage">
         <div class="cell">
-            <p>Entrée</p>
+            <div>
+                <p>Entrée</p>
+            </div>
         </div>
         <br>
         <div class="cell">
@@ -51,5 +53,9 @@ p {
     background-color: black;
     /* opacity: 50%; */
     color: white;
+}
+
+.cell:hover {
+    cursor: pointer;
 }
 </style>

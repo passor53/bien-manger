@@ -4,7 +4,6 @@
     </div>
     <div class="blockImage">
         <div class="cell">
-
         </div>
         <br>
         <div class="cell">
@@ -60,6 +59,10 @@ h1.nameRecipe {
     .cell {
         margin: 1em auto;
     }
+}
+
+.cell:hover {
+    cursor: pointer;
 }
 
 /* 

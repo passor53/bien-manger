@@ -1,6 +1,6 @@
 <template lang="fr">
     <footer>
-      <p><router-link to="/legalnotice">Mentions Légales</router-link></p><p><Router-Link to="/contact">Nous Contacter</Router-Link></p><p><Router-Link to="/about">A Propos</Router-Link></p>
+      <p><router-link to="/legalnotice">Mentions légales</router-link></p><p><Router-Link to="/contact">Nous contacter</Router-Link></p><p><Router-Link to="/about">A propos</Router-Link></p>
     </footer>
 </template>
 

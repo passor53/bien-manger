@@ -33,13 +33,13 @@
                         <li>Recettes</li>
                     </a>
                     <a href="/menu">
-                        <li>Menus</li>
+                        <li>Menu</li>
                     </a>
                     <a href="/tip">
                         <li>Astuces</li>
                     </a>
                     <a href="/about">
-                        <li>A Propos</li>
+                        <li>A propos</li>
                     </a>
                 </ul>
             </div>
