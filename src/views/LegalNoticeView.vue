@@ -8,7 +8,7 @@
 <ul>
 <li>Adresse : https://www.bien-manger.fr</li>
 <li>Date de création : 01/09/2022</li>
-<li>Auteur : Pascal Sorel-Julé / Florian </li>
+<li>Auteur : Pascal Sorel-Julé / Florian  Gabillard</li>
 <li>Adresse : Koï center – Louverné (53950)</li>
 </ul>
 <p>Siret : 79017694500018<br>
@@ -19,13 +19,13 @@ TVA non applicable, art. 293B du CGI</p>
 Le blog https://www.marciatack.fr est propulsé par WordPress, hébergé par la société OVH sur un serveur dédié Soyoustart, et administré par Lolibox.<br>
 [/av_textblock]</p>
 
-2/ Réclamations :
+<h2>2/ Réclamations :</h2>
 
-En cas de réclamation sur le contenu de ce blog, commentaire ou billet, je vous propose de m’adresser un courrier électronique.
+<p>En cas de réclamation sur le contenu de ce blog, commentaire ou billet, je vous propose de m’adresser un courrier électronique.<br>
 
-La loi vous permet même de vous adresser directement à l’hébergeur sous réserve de l’article 6, I, 4° de la loi 2004-575 du 21 juin 2004 :
+La loi vous permet même de vous adresser directement à l’hébergeur sous réserve de l’article 6, I, 4° de la loi 2004-575 du 21 juin 2004 :<br>
 
-Le fait, pour toute personne, de présenter aux[hébergeurs du site] un contenu ou une activité comme étant illicite dans le but d’en obtenir le retrait ou d’en faire cesser la diffusion, alors qu’elle sait cette information inexacte, est puni d’une peine d’un an d’emprisonnement et de 15 000 EUR d’amende.
+Le fait, pour toute personne, de présenter aux[hébergeurs du site] un contenu ou une activité comme étant illicite dans le but d’en obtenir le retrait ou d’en faire cesser la diffusion, alors qu’elle sait cette information inexacte, est puni d’une peine d’un an d’emprisonnement et de 15 000 EUR d’amende.</p>
 
 3/ Déclaration CNIL :
 
