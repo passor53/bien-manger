@@ -46,7 +46,7 @@
         </nav>
         <div class="bpseudo">
             <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg">
-            <p class="ppseudo">Pseudo</p>
+            <p class="ppseudo">{{ pseudo }}</p>
         </div>
     </div>
 
@@ -54,6 +54,11 @@
 <script>
 export default {
     name: "AppHeader",
+    computed: {
+        pseudo() {
+            return process.env.VUE_APP_KEY
+        }
+    }
 }
 </script>
     
