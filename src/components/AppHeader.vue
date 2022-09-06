@@ -78,8 +78,6 @@ export default {
     padding-right: 1vw;
 }
 
-.logos {}
-
 .logo-user {
     max-width: 14vw;
     max-height: 9vh;

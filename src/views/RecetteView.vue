@@ -12,11 +12,7 @@
             </ul>
         </div>
         <div id="recipe">
-            <p>
-                <span v-for="(element, index) of $store.getters.listRecipe " :key="index">{{ element }}&nbsp;</span>
-            </p>
-            <!-- <input type="button" @click="addRecipe" value="Ajouter une recette"> -->
-            <input type="button" @click="goToPage" value="Retour">
+            <input type="button" value="Retour" onclick="history.go(-1)">
         </div>
     </div>
     <div id="step">
