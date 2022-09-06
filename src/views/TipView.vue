@@ -4,10 +4,10 @@
             <p>Conserver un avocat coupé sans qu'il ne noircisse.</p>
         </div>
         <div class="cell">
-            Astuce
+            <p>Faut-il dégorger les concombres?</p>
         </div>
         <div class="cell">
-            Astuce
+            <p>Astuce</p>
         </div>
     </div>
 </template>

@@ -32,6 +32,10 @@ export default {
     border-bottom: 1px solid black;
 }
 
+ul {
+    list-style-type: none;
+}
+
 #recipeCell {
     border-bottom: 1px solid black;
 }
