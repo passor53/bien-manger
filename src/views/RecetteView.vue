@@ -1,14 +1,14 @@
 <template>
     <div class="blockRecipeImage">
-        <h1 class="nameRecipe">Les recettes</h1>
+        <h1 class="nameRecipe">Nom de la recette</h1>
         <div id="recipes">
             <ul class="recipeCell">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Image</li>
+                <li v-for="recette in recettes" :key="recette">
+                    <Router-Link to="/recipe">Saison {{ recette.fields.Saison }}</Router-Link>
+                </li>
+                <li>Description</li>
+                <li>les étapes</li>
             </ul>
         </div>
         <div id="recipe">
@@ -24,6 +24,7 @@
 export default {
 
 }
+
 
 </script>
 <style scoped>
