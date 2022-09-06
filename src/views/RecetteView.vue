@@ -1,5 +1,5 @@
 <template>
-    <div> class="blockRecipeImage">
+    <div class="blockRecipeImage">
         <h1 class="namerecipe">nom recette</h1>
         <div id="list-recipe">
             <img class="mini-img" src="" alt="" />
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    name: "LesRecettesView",
+    name: "LaRecetteView",
     data() {
         return {
             recettes: []

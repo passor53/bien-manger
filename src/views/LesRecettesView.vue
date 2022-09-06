@@ -4,22 +4,9 @@
     </div>
     <div class="blockImage">
         <div class="cell" v-for="recette in recettes" :key="recette">
-            <Router-Link to="/recipe">Voir recette de {{ recette.fields.Name }}</Router-Link>
+            <Router-Link :to="'/recipe/'+ recette.id">Voir recette de {{ recette.fields.Name }}</Router-Link>
         </div>
-        <br>
-        <div class="cell">
 
-
-        </div>
-        <div class="cell">
-            Voir recette
-        </div>
-        <div class="cell">
-            Voir recette
-        </div>
-        <div class="cell">
-            Voir recette
-        </div>
     </div>
 </template>
 
@@ -33,9 +20,7 @@ export default {
     },
     created() {
         console.log("La naissance du component")
-        var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Bearer keyaN8glHhIloJltf")
-        let options = { headers: myHeaders }
+        let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette?maxRecords=3&view=Grid%20view", options)
             .then(data => data.json())
             .then(data => this.recettes = data.records)
