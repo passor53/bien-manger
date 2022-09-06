@@ -12,5 +12,7 @@ export default createStore({
   actions: {
   },
   modules: {
+    // ingredients
+    // etape
   }
 })

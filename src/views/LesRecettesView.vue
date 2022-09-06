@@ -46,6 +46,7 @@ h1.nameRecipe {
     width: 20em;
     height: 15em;
     border: 1px solid whitesmoke;
+    border-radius: 20px;
 }
 
 

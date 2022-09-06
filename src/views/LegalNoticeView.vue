@@ -65,4 +65,8 @@ export default {
 .m-l {
     padding: 0 0 6vh 0;
 }
+
+ul {
+    list-style-type: none;
+}
 </style>
