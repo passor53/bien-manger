@@ -108,7 +108,7 @@ p {
     display: block;
     position: relative;
     top: 0;
-    padding-left: 6vw;
+    padding-left: 2vw;
 
     z-index: 1;
 
@@ -130,11 +130,9 @@ p {
 
 #menuToggle input {
     display: block;
-    width: 40px;
-    height: 32px;
+    width: 34px;
+    height: 25px;
     position: absolute;
-    top: -7px;
-    left: -5px;
 
     cursor: pointer;
 
@@ -208,7 +206,7 @@ p {
 #menu {
     position: absolute;
     width: 300px;
-    margin: -100px 0 0 -50px;
+    margin: -100px;
     padding: 50px;
     padding-top: 125px;
 

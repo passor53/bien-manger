@@ -6,7 +6,6 @@
         <div class="cell" v-for="recette in recettes" :key="recette">
             <Router-Link to="/recipe">Voir recette de {{ recette.fields.Name }}</Router-Link>
         </div>
-        <br>
         <div class="cell">
 
 
@@ -61,6 +60,7 @@ h1.nameRecipe {
     width: 20em;
     height: 15em;
     border: 1px solid whitesmoke;
+    border-radius: 20px;
 }
 
 
