@@ -3,12 +3,12 @@
         <h1 class="nameRecipe">Les recettes</h1>
     </div>
     <div class="blockImage">
-        <div class="cell">
-            <Router-Link to="/recipe">Voir recette</Router-Link>
-        </div>
-        <br>
         <div class="cell" v-for="recette in recettes" :key="recette">
             <Router-Link to="/recipe">Voir recette de {{ recette.fields.Name }}</Router-Link>
+        </div>
+        <br>
+        <div class="cell">
+
 
         </div>
         <br>

@@ -4,7 +4,9 @@
         <div id="recipes">
             <ul class="recipeCell">
                 <li>Image</li>
-                <li>Saison</li>
+                <li v-for="recette in recettes" :key="recette">
+                    <Router-Link to="/recipe">Saison {{ recette.fields.Saison }}</Router-Link>
+                </li>
                 <li>Description</li>
                 <li>les étapes</li>
             </ul>
