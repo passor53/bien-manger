@@ -4,9 +4,8 @@
     </div>
     <div class="blockImage">
         <div class="cell" v-for="recette in recettes" :key="recette">
-            <Router-Link :to="'/recipe/'+ recette.id">Voir recette de {{ recette.fields.Name }}</Router-Link>
+            <Router-Link :to="'/recipe/'+ recette.id">Recette de {{ recette.fields.Name }}</Router-Link>
         </div>
-
     </div>
 </template>
 
