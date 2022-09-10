@@ -1,6 +1,7 @@
 <template>
     <div class="blockRecipeImage">
-        <h1 class="namerecipe">nom recette</h1>
+        <h1 class="namerecipe">nom recette
+        </h1>
         <div id="list-recipe">
             <img class="mini-img" src="" alt="" />
             <div class="season">
@@ -9,8 +10,8 @@
             <div>
                 <p>Description</p>
             </div>
-            <div class="step" v-for="recette in recettes" :key="recette">etapes
-                <Router-Link to="/recipe">{{ recette.fields.Etape }}</Router-Link>
+            <div class="step">
+                <p>Etapes</p>
             </div>
 
             <div id="recipe-return">
@@ -18,6 +19,7 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -37,9 +39,9 @@ export default {
             .then(data => data.json())
             .then(data => this.recettes = data.records)
 
-    },
-}
 
+    }
+}
 
 </script>
 <style scoped>
