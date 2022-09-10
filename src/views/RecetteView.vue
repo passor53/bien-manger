@@ -4,16 +4,17 @@
         </h1>
         <div id="list-recipe">
             <img class="mini-img" src="" alt="" />
-            <div class="season">
-                <p>Saison</p>
+
+            <div class="season" v-for="recette in recettes" :key="recette">Saison
+                <div v-for="(saison, index) of recette.fields.Saison" :key="index">
+                    {{$store.getters.getSaisonnameFromId(saison)}}</div>
             </div>
-            <div>
-                <p>Description</p>
+            <div class="description" v-for="recette in recettes" :key="recette">Description
+                <Router-Link to="/recipe">{{ recette.fields.Description }}</Router-Link>
             </div>
             <div class="step">
                 <p>Etapes</p>
             </div>
-
             <div id="recipe-return">
                 <input type="button" value="Retour" onclick="history.go(-1)">
             </div>
@@ -34,10 +35,11 @@ export default {
         console.log("La naissance du component")
         var myHeaders = new Headers();
         myHeaders.append("Authorization", "Bearer keyaN8glHhIloJltf")
+        let id_de_la_recette = this.$route.params.id
         let options = { headers: myHeaders }
-        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette?maxRecords=3&view=Grid%20view", options)
+        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/" + id_de_la_recette, options)
             .then(data => data.json())
-            .then(data => this.recettes = data.records)
+            .then(data => this.recettes = [data])
 
 
     }
