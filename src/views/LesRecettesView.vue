@@ -5,6 +5,9 @@
     <div class="blockImage">
         <div class="cell" v-for="recette in recettes" :key="recette">
             <Router-Link :to="'/recipe/'+ recette.id">Recette de {{ recette.fields.Name }}</Router-Link>
+            <div class="season_recipe" v-for="saison in saisons" :key="saison">
+                <Router-link :to="'/season/'+ saison.id">Saison {{ saison.fields.Name }}</Router-link>
+            </div>
         </div>
     </div>
 </template>
@@ -14,7 +17,8 @@ export default {
     name: "LesRecettesView",
     data() {
         return {
-            recettes: []
+            recettes: [],
+            saisons: []
         }
     },
     created() {
@@ -23,8 +27,18 @@ export default {
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette?maxRecords=3&view=Grid%20view", options)
             .then(data => data.json())
             .then(data => this.recettes = data.records)
+
+        {
+            console.log("La naissance du component")
+            let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
+            fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison?maxRecords=4&view=Grid%20view", options)
+                .then(data => data.json())
+                .then(data => this.saisons = data.records)
+        }
     }
 }
+
+
 
 </script>
 <style scoped>

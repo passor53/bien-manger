@@ -25,12 +25,12 @@ export default createStore({
       fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison", options)
         .then(data => data.json())
         .then(data => {
-          let t16 = [];
+          let tsaison = [];
           for (let index = 0; index < data.records.length; index++) {
             const db_record = data.records[index];
-            t16.push({ id: db_record.id, name: db_record.fields.Name })
+            tsaison.push({ id: db_record.id, name: db_record.fields.Name })
           }
-          context.commit("setSaisons", t16)
+          context.commit("setSaisons", tsaison)
         })
     }
   },

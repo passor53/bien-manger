@@ -1,19 +1,22 @@
 <template>
     <div class="blockRecipeImage">
-        <h1 class="namerecipe">nom recette
+        <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
+            <Router-link to="/recipe">{{ recette.fields.Name }}</Router-link>
         </h1>
         <div id="list-recipe">
             <img class="mini-img" src="" alt="" />
 
-            <div class="season" v-for="recette in recettes" :key="recette">Saison
-                <div v-for="(saison, index) of recette.fields.Saison" :key="index">
-                    {{$store.getters.getSaisonnameFromId(saison)}}</div>
+            <div class="season" v-for="recette in recettes" :key="recette">
+                <p>Saison</p>
+                <Router-link to="/season">{{ recette.fields.Saison }}</Router-link>
             </div>
-            <div class="description" v-for="recette in recettes" :key="recette">Description
+            <div class="description" v-for="recette in recettes" :key="recette">
+                <p>Description</p>
                 <Router-Link to="/recipe">{{ recette.fields.Description }}</Router-Link>
             </div>
-            <div class="step">
+            <div class="step" v-for="recette in recettes" :key="recette">
                 <p>Etapes</p>
+                <Router-link to="/step">{{ recette.fields.Etape }}</Router-link>
             </div>
             <div id="recipe-return">
                 <input type="button" value="Retour" onclick="history.go(-1)">

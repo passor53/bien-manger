@@ -6,7 +6,7 @@
     <h4>Remplissez le formulaire ci-dessous pour en savoir plus !</h4>
   </div>
   <div class="row body">
-    <form action="#">
+    <form methode="post" action="mailto:truc.much@gmail.com">
       <ul>
         
         <li>

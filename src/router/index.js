@@ -8,6 +8,8 @@ import LoginView from '../views/LoginView.vue'
 import ContactView from '../views/ContactView.vue'
 import AboutView from '../views/AboutView.vue'
 import LegalNoticeView from '../views/LegalNoticeView.vue'
+import SeasonView from '../views/LesRecettesView.vue'
+import SeasonsView from '../views/LesRecettesView.vue'
 
 const routes = [
   {
@@ -38,6 +40,18 @@ const routes = [
     path: '/recipe/:id',
     name: 'recipe',
     component: RecipeView
+  },
+
+  {
+    path: '/seasons/',
+    name: 'seasons',
+    component: SeasonsView
+  },
+
+  {
+    path: '/season/:id',
+    name: 'season',
+    component: SeasonView
   },
 
   {
