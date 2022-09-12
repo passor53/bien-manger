@@ -7,15 +7,15 @@
             <img class="mini-img" src="" alt="" />
 
             <div class="season" v-for="recette in recettes" :key="recette">
-                <p>Saison</p>
+                <h2>Saison</h2>
                 <Router-link to="/season">{{ recette.fields.Saison }}</Router-link>
             </div>
             <div class="description" v-for="recette in recettes" :key="recette">
-                <p>Description</p>
+                <h2>Description</h2>
                 <Router-Link to="/recipe">{{ recette.fields.Description }}</Router-Link>
             </div>
             <div class="step" v-for="recette in recettes" :key="recette">
-                <p>Etapes</p>
+                <h2>Etapes</h2>
                 <Router-link to="/step">{{ recette.fields.Etape }}</Router-link>
             </div>
             <div id="recipe-return">
@@ -50,6 +50,19 @@ export default {
 
 </script>
 <style scoped>
+h2 {
+    font-size: large;
+}
+
+h1 a {
+    color: #87e7e1;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 p {
     color: whitesmoke;
 }

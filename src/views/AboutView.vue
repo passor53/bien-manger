@@ -33,7 +33,6 @@ h1 {
 
 ul {
   text-align: justify center;
-  color: #f48c06;
   font-style: italic;
   padding: 0 3vw 0 3vw;
   list-style-type: none;

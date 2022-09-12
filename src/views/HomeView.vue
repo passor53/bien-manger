@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/Bien-Manger.jpg">
     <HelloWorld msg="Le site de référence pour partager ses recettes" />
-    {{$store.getters.saisons}}
+    <!-- {{$store.getters.saisons}} -->
     <Router-Link to="/login">login</Router-Link> <!-- | -->
   </div>
 
@@ -15,7 +15,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: 'HomeView',
   created() {
-    this.$store.dispatch("initializeSaisons")
+    //this.$store.dispatch("initializeSaisons")
   },
   components: {
     HelloWorld

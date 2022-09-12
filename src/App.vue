@@ -29,7 +29,7 @@ body {
   padding: 0;
 
   /* make it look decent enough */
-  background: #370617;
+  background: rgb(32, 32, 32);
   color: black;
   font-family: "Avenir Next", "Avenir", sans-serif;
   text-align: center;
@@ -37,20 +37,24 @@ body {
 
 h1 {
   margin-top: 5vh;
-  color: #ffba08;
+  color: #87e7e1;
 }
 
 h2 {
-  color: #ffba08;
+  color: #87e7e1;
   ;
 }
 
+h4 {
+  color: #87e7e1
+}
+
 ul {
-  color: #f48c06;
+  color: whitesmoke;
 }
 
 p {
-  color: #f48c06;
+  color: whitesmoke;
   padding: 0 3vw 0 3vw;
 }
 </style>

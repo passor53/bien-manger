@@ -1,10 +1,12 @@
 <template>
     <div class="blockRecipeImage">
-        <h1 class="nameRecipe">Les recettes</h1>
+        <h1 class="nameRecipe">Les Recettes</h1>
     </div>
     <div class="blockImage">
         <div class="cell" v-for="recette in recettes" :key="recette">
-            <Router-Link :to="'/recipe/'+ recette.id">Recette de {{ recette.fields.Name }}</Router-Link>
+            <p class="name-recipe">
+                <Router-Link :to="'/recipe/'+ recette.id">{{ recette.fields.Name }}</Router-Link>
+            </p>
             <div class="season_recipe" v-for="saison in saisons" :key="saison">
                 <Router-link :to="'/season/'+ saison.id">Saison {{ saison.fields.Name }}</Router-link>
             </div>
@@ -42,6 +44,23 @@ export default {
 
 </script>
 <style scoped>
+p a {
+    text-decoration: none;
+    color: #87e7e1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.name-recipe {
+    border-radius: 19px 19px 0px 0px;
+    border: solid 1px whitesmoke;
+    background-color: black;
+    opacity: 90%;
+}
+
 h1.nameRecipe {
     text-align: center;
     border-bottom: 1px solid whitesmoke;
@@ -53,6 +72,7 @@ h1.nameRecipe {
 }
 
 .cell {
+    background-image: url(../assets/recette.jpg);
     margin-left: 5em;
     margin-bottom: 5em;
     margin-top: 2em;

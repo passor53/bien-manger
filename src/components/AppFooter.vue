@@ -19,12 +19,17 @@ footer {
     bottom: 0;
     width: 100vw;
     height: 8vh;
-    background-color: #6a040f;
+    background-color: #e8b5db;
     justify-content: center;
     align-items: center;
 }
 
 p {
     padding: 2.5vh 1vw 0 1vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 </style>

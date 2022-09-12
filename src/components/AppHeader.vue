@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <header class="header">
         <nav role="navigation">
             <div id="menuToggle">
                 <!--
@@ -44,11 +44,12 @@
                 </ul>
             </div>
         </nav>
+        <img class="logo_bm" alt="Logo de Bien-Manger" src="../assets/bine-manger.png" />
         <div class="bpseudo">
-            <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg">
+            <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg" />
             <p class="ppseudo">{{ pseudo }}</p>
         </div>
-    </div>
+    </header>
 
 </template>
 <script>
@@ -73,17 +74,23 @@ export default {
     height: 15vh;
 }
 
+.logo_bm {
+    max-width: 14vw;
+    max-height: 10vh;
+}
+
 .bpseudo {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 .ppseudo {
     padding-right: 1vw;
 }
 
-.logo-user {
+img.logo-user {
     max-width: 14vw;
     max-height: 9vh;
     width: 14vw;
@@ -91,16 +98,17 @@ export default {
 }
 
 p {
-    color: #C3d898;
+    color: black;
     text-align: center;
 }
 
 .header {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #6a040f;
+    background-color: #e8b5db;
 
 }
 
@@ -154,7 +162,7 @@ p {
     margin-bottom: 5px;
     position: relative;
 
-    background: #cdcdcd;
+    background: rgb(32, 32, 32);
     border-radius: 3px;
 
     z-index: 1;
