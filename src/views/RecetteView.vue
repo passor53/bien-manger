@@ -1,26 +1,24 @@
 <template>
     <div class="blockRecipeImage">
-        <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
-            <Router-link to="/recipe">{{ recette.fields.Name }}</Router-link>
-        </h1>
-        <div id="list-recipe">
-            <img class="mini-img" src="" alt="" />
+        <h1 class="nameRecipe">nom recette</h1>
 
-            <div class="season" v-for="recette in recettes" :key="recette">
-                <h2>Saison</h2>
-            </div>
-            <div class="description" v-for="recette in recettes" :key="recette">
-                <h2>Description</h2>
-                <Router-Link to="/recipe">{{ recette.fields.Description }}</Router-Link>
-            </div>
-            <div class="step" v-for="recette in recettes" :key="recette">
-                <h2>Etapes</h2>
-                <Router-link to="/step">{{ recette.fields.Etape }}</Router-link>
-            </div>
-            <div id="recipe-return">
-                <input type="button" value="Retour" onclick="history.go(-1)">
-            </div>
+        <div class="season">
+            <h2>Saison</h2>
+
         </div>
+
+        <div class="description">
+            <h2>Description</h2>
+        </div>
+
+        <div class="step">
+            <h2>Etapes</h2>
+
+        </div>
+        <div id="recipe-return">
+            <input type="button" value="Retour" onclick="history.go(-1)">
+        </div>
+
     </div>
 
 </template>
@@ -30,23 +28,22 @@ export default {
     name: "LaRecetteView",
     data() {
         return {
-            recettes: []
+            recette: []
         }
     },
     created() {
-        console.log("La naissance du component")
+
         var myHeaders = new Headers();
         myHeaders.append("Authorization", "Bearer keyaN8glHhIloJltf")
         let id_de_la_recette = this.$route.params.id
         let options = { headers: myHeaders }
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/" + id_de_la_recette, options)
             .then(data => data.json())
-            .then(data => this.recettes = [data])
+            .then(data => this.recette = [data])
 
 
     }
 }
-
 </script>
 <style scoped>
 h2 {
