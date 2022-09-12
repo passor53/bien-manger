@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/Bien-Manger.jpg">
     <HelloWorld msg="Le site de référence pour partager ses recettes" />
     <!-- {{$store.getters.saisons}} -->
-    <Router-Link to="/login">login</Router-Link> <!-- | -->
+    <Router-Link to="/login">login</Router-Link>
   </div>
 
 </template>

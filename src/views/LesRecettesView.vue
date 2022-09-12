@@ -96,4 +96,12 @@ h1.nameRecipe {
 #recipe {
     border-bottom: 1px solid whitesmoke;
 }
+
+p a:visited {
+    font-style: italic;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
 </style>
