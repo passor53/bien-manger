@@ -26,6 +26,7 @@ footer {
 
 p {
     padding: 2.5vh 1vw 0 1vw;
+    text-decoration: underline;
 }
 
 a {
