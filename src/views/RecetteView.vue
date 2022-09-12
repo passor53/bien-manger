@@ -3,18 +3,21 @@
         <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
             <Router-link to="/recipe">{{ recette.fields.Name }}</Router-link>
         </h1>
-        <div id="list-recipe">
+        <div id="list-recipe" v-for="recette in recettes" :key="recette">
             <img class="mini-img" src="" alt="" />
 
-            <div class="season" v-for="recette in recettes" :key="recette">
+            <div class="season">
                 <h2>Saison</h2>
-                <Router-link to="/season">{{ recette.fields.Saison }}</Router-link>
+                <div class="season_recipe" v-for="saison in recette.fields.Saison" :key="saison">
+                    {{$store.getters.getSaisonnameFromId(saison)}}
+                </div>
+
             </div>
-            <div class="description" v-for="recette in recettes" :key="recette">
+            <div class="description">
                 <h2>Description</h2>
                 <Router-Link to="/recipe">{{ recette.fields.Description }}</Router-Link>
             </div>
-            <div class="step" v-for="recette in recettes" :key="recette">
+            <div class="step">
                 <h2>Etapes</h2>
                 <Router-link to="/step">{{ recette.fields.Etape }}</Router-link>
             </div>
@@ -31,10 +34,14 @@ export default {
     name: "LaRecetteView",
     data() {
         return {
-            recettes: []
+            recettes: [],
+            saisons: []
         }
     },
     created() {
+        this.$store.dispatch("initializeSaisons")
+
+
         console.log("La naissance du component")
         var myHeaders = new Headers();
         myHeaders.append("Authorization", "Bearer keyaN8glHhIloJltf")
@@ -43,6 +50,11 @@ export default {
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/" + id_de_la_recette, options)
             .then(data => data.json())
             .then(data => this.recettes = [data])
+        /*console.log("NEXT")
+        let id_de_la_saison = this.$route.params.id
+        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison/" + id_de_la_saison, options)
+            .then(data => data.json())
+            .then(data => this.saisons = [data])*/
 
 
     }

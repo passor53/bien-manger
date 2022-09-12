@@ -5,8 +5,15 @@ export default createStore({
     saisons: []
   },
   getters: {
-    getSaisonnameFromId(id) {
-      return this.saisons.filter(saison => saison.id == id)[0].name
+    getSaisonnameFromId: (state) => (id) => {
+
+      if (state.saisons.length > 0) {
+        console.log(state.saisons)
+        console.log(id)
+        let s = state.saisons.filter(saison => saison.id == id)
+        return s[0]?.name
+      }
+      return null
     },
     saisons(state) {
       return state.saisons
@@ -30,12 +37,12 @@ export default createStore({
             const db_record = data.records[index];
             tsaison.push({ id: db_record.id, name: db_record.fields.Name })
           }
+          console.log("VUEX: Initialisation des saisons")
+          console.log(tsaison)
           context.commit("setSaisons", tsaison)
         })
     }
   },
   modules: {
-    // ingredients
-    // etape
   }
 })
