@@ -47,7 +47,9 @@
         <img class="logo_bm" alt="Logo de Bien-Manger" src="../assets/bine-manger.png" />
         <div class="bpseudo">
             <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg" />
-            <p class="ppseudo">{{ pseudo }}</p>
+            <p class="ppseudo">
+                <Router-Link to="/login">login</Router-Link> <!-- {{ pseudo }} -->
+            </p>
         </div>
     </header>
 

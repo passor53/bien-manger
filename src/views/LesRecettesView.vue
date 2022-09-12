@@ -7,8 +7,10 @@
             <p class="name-recipe">
                 <Router-Link :to="'/recipe/'+ recette.id">{{ recette.fields.Name }}</Router-Link>
             </p>
-            <div class="season_recipe" v-for="saison in saisons" :key="saison">
-                <Router-link :to="'/season/'+ saison.id">Saison {{ saison.fields.Name }}</Router-link>
+            <div class="season_recipe" v-for="saison in recette.fields.Saison" :key="saison">
+                {{$store.getters.getSaisonnameFromId(saison)}}
+
+
             </div>
         </div>
     </div>
@@ -24,19 +26,13 @@ export default {
         }
     },
     created() {
+        this.$store.dispatch("initializeSaisons")
+
         console.log("La naissance du component")
         let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette?maxRecords=3&view=Grid%20view", options)
             .then(data => data.json())
             .then(data => this.recettes = data.records)
-
-        {
-            console.log("La naissance du component")
-            let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
-            fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison?maxRecords=4&view=Grid%20view", options)
-                .then(data => data.json())
-                .then(data => this.saisons = data.records)
-        }
     }
 }
 
@@ -64,6 +60,15 @@ a {
 h1.nameRecipe {
     text-align: center;
     border-bottom: 1px solid whitesmoke;
+}
+
+.season_recipe {
+    border: solid 1px black;
+    border-radius: 0px 0px 19px 19px;
+    border: solid 1px whitesmoke;
+    background-color: black;
+    opacity: 90%;
+    color: yellow;
 }
 
 .blockImage {

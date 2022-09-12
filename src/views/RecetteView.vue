@@ -8,7 +8,6 @@
 
             <div class="season" v-for="recette in recettes" :key="recette">
                 <h2>Saison</h2>
-                <Router-link to="/season">{{ recette.fields.Saison }}</Router-link>
             </div>
             <div class="description" v-for="recette in recettes" :key="recette">
                 <h2>Description</h2>
