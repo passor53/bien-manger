@@ -32,6 +32,9 @@ export default {
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette?maxRecords=3&view=Grid%20view", options)
             .then(data => data.json())
             .then(data => this.recettes = data.records)
+        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison?maxRecords=3&view=Grid%20view", options)
+            .then(data => data.json())
+            .then(data => this.saisons = [data])
     }
 }
 
@@ -93,9 +96,6 @@ h1.nameRecipe {
     }
 }
 
-.cell:hover {
-    cursor: pointer;
-}
 
 #recipe {
     border-bottom: 1px solid whitesmoke;

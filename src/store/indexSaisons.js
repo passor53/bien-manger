@@ -44,7 +44,5 @@ export default createStore({
     }
   },
   modules: {
-    // ingredients
-    // etape
   }
 })
