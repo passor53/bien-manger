@@ -1,6 +1,5 @@
 <template lang="">
     <div class="meplogin">
-        <img class="logo-mini" alt="Logo du Site" src="../assets/Bien-Manger.jpg"/>
         <form method="post" action="traitement.php">
             <p> 
              <label for="pseudo"><h4>Votre Pseudo :</h4></label><!-- Donne un libelé au champ ci dessous (on ajoute aussi l'attribut [id="pseudo"] à la balise input !!!) -->
@@ -21,6 +20,7 @@
             <input type="password" v-model="Mot_de_passe" id="password" />
             </p>
             <input type="submit" value="Envoyer" />
+            <input type="button" class="button" value="Retour" onclick="history.go(-1)">
         </form> 
 
     </div>
@@ -38,5 +38,9 @@ export default {
 .logo-mini {
     padding-bottom: 5vh;
 
+}
+
+.button {
+    margin: 1vw;
 }
 </style>

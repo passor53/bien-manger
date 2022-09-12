@@ -44,10 +44,15 @@
                 </ul>
             </div>
         </nav>
-        <img class="logo_bm" alt="Logo de Bien-Manger" src="../assets/bine-manger.png" />
+        <div>
+            <a class="logo_bm" href="/"><img src="../assets/bine-manger.png" alt="tonimage" /></a>
+            <!-- <img class="logo_bm" alt="Logo de Bien-Manger" src="../assets/bine-manger.png" /> -->
+        </div>
         <div class="bpseudo">
             <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg" />
-            <p class="ppseudo">{{ pseudo }}</p>
+            <p class="ppseudo">
+                <Router-Link to="/login">Se connecter</Router-Link>{{ pseudo }}
+            </p>
         </div>
     </header>
 
@@ -74,7 +79,7 @@ export default {
     height: 15vh;
 }
 
-.logo_bm {
+img {
     max-width: 14vw;
     max-height: 10vh;
 }
@@ -86,15 +91,9 @@ export default {
 
 }
 
-.ppseudo {
-    padding-right: 1vw;
-}
-
 img.logo-user {
     max-width: 14vw;
     max-height: 9vh;
-    width: 14vw;
-    height: 9vh;
 }
 
 p {
@@ -260,7 +259,6 @@ p {
 
 .logo-user {
     border: solid 1px none;
-    width: 33vw;
     height: 15vh;
 }
 
