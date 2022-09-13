@@ -5,14 +5,9 @@ export default {
     },
     getters: {
         getIngredientnameFromId: (state) => (id) => {
-
-            if (state.ingredients.length > 0) {
-                console.log(state.ingredients)
-                console.log(id)
-                let i = state.ingredients.filter(ingredient => ingredient.id == id)
-                return i[0]?.name
-            }
-            return null
+            let i = state.ingredients.find(ing => ing.id == id)
+            console.log(i)
+            return i
         },
         ingredients(state) {
             return state.ingredients

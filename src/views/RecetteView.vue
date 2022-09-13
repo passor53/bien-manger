@@ -17,6 +17,10 @@
                 <h2>Description</h2>
                 {{$store.getters['descriptions/getDescriptionnameFromId'](description.id).name}}
             </div>
+            <div class="ingredient" v-for="ingredient in recettes" :key="ingredient">
+                <h2>Ingredients</h2>
+                {{$store.getters['ingredients/getIngredientnameFromId'](ingredient.id)?.name}}
+            </div>
             <h2>Etapes</h2>
             <div class="step" v-for="step in recette.fields.Etape" :key="step">
                 <b>{{$store.getters['steps/getFromId'](step)?.name}}</b>
@@ -46,6 +50,7 @@ export default {
         this.$store.dispatch('names/initializeRecettes')
         this.$store.dispatch('steps/initializeSteps')
         this.$store.dispatch('descriptions/initializeDescriptions')
+        this.$store.dispatch('ingredients/initalizeIngredients')
 
         console.log("La naissance du component")
         var myHeaders = new Headers();
