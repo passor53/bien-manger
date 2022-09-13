@@ -13,9 +13,9 @@
                 </div>
 
             </div>
-            <div class="description">
+            <div class="description" v-for="description in recettes" :key="description">
                 <h2>Description</h2>
-                {{$store.getters['descriptions/getDescriptionnameFromId'](description)}}
+                {{$store.getters['descriptions/getDescriptionnameFromId'](description.id).name}}
             </div>
             <h2>Etapes</h2>
             <div class="step" v-for="step in recette.fields.Etape" :key="step">

@@ -5,23 +5,18 @@ export default {
     },
     getters: {
         getDescriptionnameFromId: (state) => (id) => {
+            let d = state.descriptions.find(name => name.id == id)
+            console.log(d)
+            return d
 
-            if (state.descriptions.length > 0) {
-                console.log('status description et id')
-                console.log(state.descriptions)
-                console.log(id)
-                let d = state.descriptions.filter(description => description.id)
-                return d[0]?.name
-            }
-            return null
         },
-        descriptions(state) {
-            return state.description
-        }
+    },
+    descriptions(state) {
+        return state.descriptions
     },
     mutations: {
         setDescription(state, data) {
-            state.description = data
+            state.descriptions = data
         }
     },
     actions: {
