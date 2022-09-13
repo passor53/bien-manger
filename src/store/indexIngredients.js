@@ -23,7 +23,7 @@ export default {
             var myHeaders = new Headers();
             myHeaders.append("Authorization", "Bearer keyaN8glHhIloJltf")
             let options = { headers: myHeaders }
-            fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Ingredient", options)
+            fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette_has_Ingredient", options)
                 .then(data => data.json())
                 .then(data => {
                     let tingredient = [];
