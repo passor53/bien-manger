@@ -53,7 +53,7 @@ body {
 .container {
   max-width: 400px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
 }
 

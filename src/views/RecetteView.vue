@@ -26,18 +26,6 @@
             </div>
         </div>
 
-        <div class="description">
-            <h2>Description</h2>
-        </div>
-
-        <div class="step">
-            <h2>Etapes</h2>
-
-        </div>
-        <div id="recipe-return">
-            <input type="button" value="Retour" onclick="history.go(-1)">
-        </div>
-
     </div>
 
 </template>
