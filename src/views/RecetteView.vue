@@ -10,7 +10,7 @@
             <div class="season">
                 <h2>Saison</h2>
                 <div class="season_recipe" v-for="saison in recette.fields.Saison" :key="saison">
-                    {{$store.getters.getSaisonnameFromId(saison)}}
+                    {{$store.getters['saisons/getSaisonnameFromId'](saison)}}
                 </div>
 
             </div>
@@ -40,7 +40,7 @@ export default {
         }
     },
     created() {
-        this.$store.dispatch("initializeSaisons")
+        this.$store.dispatch("saisons/initializeSaisons")
 
 
         console.log("La naissance du component")
