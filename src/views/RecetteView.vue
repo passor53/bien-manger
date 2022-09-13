@@ -73,6 +73,14 @@ p {
     color: whitesmoke;
 }
 
+.season {
+    color: yellow;
+}
+
+.description {
+    color: whitesmoke;
+}
+
 .nameRecipe {
     border-bottom: 1px solid black;
 }
