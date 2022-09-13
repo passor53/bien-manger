@@ -18,10 +18,12 @@
                 <h2>Description</h2>
                 {{$store.getters['descriptions/getDescriptionnameFromId'](description)}}
             </div>
-            <h2 v-if="recette.fields.Etape">Etapes</h2>
+            <h2>Etapes</h2>
             <div class="step" v-for="step in recette.fields.Etape" :key="step">
-                {{step}}
-                {{$store.getters['steps/getStepsnameFromId'](step)}}
+                <b>{{$store.getters['steps/getFromId'](step)?.name}}</b>
+                <br>
+                {{$store.getters['steps/getFromId'](step)?.description}}
+
             </div>
             <div id="recipe-return">
                 <input type="button" value="Retour" onclick="history.go(-1)">
@@ -76,7 +78,7 @@ p {
 }
 
 .season {
-    color: yellow;
+    color: whitesmoke;
 }
 
 .description {

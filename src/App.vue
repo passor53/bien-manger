@@ -30,7 +30,7 @@ body {
 
   /* make it look decent enough */
   background: rgb(32, 32, 32);
-  color: black;
+  color: whitesmoke;
   font-family: "Avenir Next", "Avenir", sans-serif;
   text-align: center;
 }
