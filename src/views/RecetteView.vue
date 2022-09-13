@@ -1,12 +1,11 @@
 <template>
     <div class="blockRecipeImage">
         <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
-            {{$store.getters['names/getRecettenameFromId'](name)}}
+            {{$store.getters['names/getRecettenameFromId'](recette.id).name}}
         </h1>
         <h2>{{$store.getters['names/toto']}}</h2>
         <div id="list-recipe" v-for="recette in recettes" :key="recette">
             <img class="mini-img" src="" alt="" />
-
             <div class="season">
                 <h2>Saison</h2>
                 <div class="season_recipe" v-for="saison in recette.fields.Saison" :key="saison">

@@ -6,11 +6,11 @@ export default {
     getters: {
         getDescriptionnameFromId: (state) => (id) => {
 
-            if (state.description.length > 0) {
+            if (state.descriptions.length > 0) {
                 console.log('status description et id')
-                console.log(state.description)
+                console.log(state.descriptions)
                 console.log(id)
-                let d = state.description.filter(description => description.id)
+                let d = state.descriptions.filter(description => description.id)
                 return d[0]?.name
             }
             return null
