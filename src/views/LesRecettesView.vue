@@ -26,7 +26,7 @@ export default {
         }
     },
     created() {
-        this.$store.dispatch("initializeSaisons")
+        this.$store.dispatch("saisons/initializeSaisons")
 
         let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette?maxRecords=3&view=Grid%20view", options)

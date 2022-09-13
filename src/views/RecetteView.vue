@@ -1,7 +1,7 @@
 <template>
     <div class="blockRecipeImage">
         <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
-            {{$store.getters.getRecettenameFromId(name)}}
+            {{$store.getters['names/getRecettenameFromId'](name)}}
         </h1>
         <h2>{{$store.getters['names/toto']}}</h2>
         <div id="list-recipe" v-for="recette in recettes" :key="recette">
@@ -18,9 +18,10 @@
                 <h2>Description</h2>
                 <Router-Link to="/recipe">{{ recette.fields.Description }}</Router-Link>
             </div>
-            <div class="step">
-                <h2>Etapes</h2>
-                <Router-link to="/step">{{ recette.fields.Etape }}</Router-link>
+            <h2 v-if="recette.fields.Etape">Etapes</h2>
+            <div class="step" v-for="step in recette.fields.Etape" :key="step">
+                {{step}}
+                {{$store.getters['steps/getStepsnameFromId'](step)}}
             </div>
             <div id="recipe-return">
                 <input type="button" value="Retour" onclick="history.go(-1)">
@@ -41,6 +42,8 @@ export default {
     },
     created() {
         this.$store.dispatch("saisons/initializeSaisons")
+        this.$store.dispatch('names/initializeRecettes')
+        this.$store.dispatch('steps/initializeSteps')
 
 
         console.log("La naissance du component")
