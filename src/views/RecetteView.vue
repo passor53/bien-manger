@@ -16,7 +16,7 @@
             </div>
             <div class="description">
                 <h2>Description</h2>
-                <Router-Link to="/recipe">{{ recette.fields.Description }}</Router-Link>
+                {{$store.getters['descriptions/getDescriptionnameFromId'](description)}}
             </div>
             <div class="step">
                 <h2>Etapes</h2>
@@ -42,7 +42,7 @@ export default {
     created() {
         this.$store.dispatch("saisons/initializeSaisons")
         this.$store.dispatch('names/initializeRecettes')
-
+        this.$store.dispatch('descriptions/initializeDescriptions')
 
         console.log("La naissance du component")
         var myHeaders = new Headers();
