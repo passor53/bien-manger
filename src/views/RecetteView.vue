@@ -1,7 +1,7 @@
 <template>
     <div class="blockRecipeImage">
         <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
-            {{$store.getters.getRecettenameFromId(name)}}
+            {{$store.getters['names/getRecettenameFromId'](name)}}
         </h1>
         <h2>{{$store.getters['names/toto']}}</h2>
         <div id="list-recipe" v-for="recette in recettes" :key="recette">
@@ -41,6 +41,7 @@ export default {
     },
     created() {
         this.$store.dispatch("saisons/initializeSaisons")
+        this.$store.dispatch('names/initializeRecettes')
 
 
         console.log("La naissance du component")
