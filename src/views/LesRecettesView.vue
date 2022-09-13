@@ -9,7 +9,7 @@
                 <Router-Link :to="'/recipe/'+ recette.id">{{ recette.fields.Name }}</Router-Link>
             </p>
             <div class="season_recipe" v-for="saison in recette.fields.Saison" :key="saison">
-                {{$store.getters.getSaisonnameFromId(saison)}}
+                {{$store.getters['saisons/getSaisonnameFromId'](saison)}}
 
 
             </div>
