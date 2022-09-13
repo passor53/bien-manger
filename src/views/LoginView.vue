@@ -17,7 +17,20 @@
 </template>
 <script>
 export default {
+    name: "LoginView",
+    data() {
+        return {
+            user: []
+        }
+    },
+    created() {
+        this.$store.dispatch("initializeUsers")
 
+        let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
+        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Utilisateur?maxRecords=3&view=Grid%20view", options)
+            .then(data => data.json())
+            .then(data => this.users = data.records)
+    }
 }
 </script>
 <style scoped>
