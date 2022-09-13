@@ -1,27 +1,27 @@
-import { createStore } from 'vuex'
-
-export default createStore({
+export default {
+    namespaced: true,
     state: {
-        recettes: []
+        names: [],
     },
     getters: {
-        getRecettenameFromId: (state) => (Name) => {
+        getRecettenameFromId: (state) => (id) => {
 
-            if (state.recettes.length > 0) {
-                console.log(state.recettes)
-                console.log(Name)
-                let r = state.recettes.filter(recette => recette.Name)
+            if (state.recette.length > 0) {
+                console.log('status recette et id')
+                console.log(state.recette)
+                console.log(id)
+                let r = state.recette.filter(recette => recette.id)
                 return r[0]?.name
             }
             return null
         },
         recettes(state) {
-            return state.recettes
+            return state.recette
         }
     },
     mutations: {
-        setRecettes(state, data) {
-            state.recettes = data
+        setRecette(state, data) {
+            state.recette = data
         }
     },
     actions: {
@@ -39,12 +39,10 @@ export default createStore({
                     }
                     console.log("VUEX: Initialisation des recettes")
                     console.log(trecette)
-                    context.commit("setRecettes", trecette)
+                    context.commit("setRecette", trecette)
                 })
         }
     },
     modules: {
-        // ingredients
-        // etape
     }
-})
+}

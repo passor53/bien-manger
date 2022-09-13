@@ -1,8 +1,9 @@
 <template>
     <div class="blockRecipeImage">
         <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
-            <Router-link to="/recipe">{{ recette.fields.Name }}</Router-link>
+            {{$store.getters.getRecettenameFromId(name)}}
         </h1>
+        <h2>{{$store.getters['names/toto']}}</h2>
         <div id="list-recipe" v-for="recette in recettes" :key="recette">
             <img class="mini-img" src="" alt="" />
 
@@ -25,15 +26,6 @@
                 <input type="button" value="Retour" onclick="history.go(-1)">
             </div>
         </div>
-
-        <div class="description">
-            <h2>Description</h2>
-        </div>
-
-        <div class="step">
-            <h2>Etapes</h2>
-
-        </div>
         <div id="recipe-return">
             <input type="button" value="Retour" onclick="history.go(-1)">
         </div>
@@ -48,7 +40,6 @@ export default {
     data() {
         return {
             recettes: [],
-            saisons: []
         }
     },
     created() {
@@ -63,13 +54,6 @@ export default {
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/" + id_de_la_recette, options)
             .then(data => data.json())
             .then(data => this.recettes = [data])
-        /*console.log("NEXT")
-        let id_de_la_saison = this.$route.params.id
-        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison/" + id_de_la_saison, options)
-            .then(data => data.json())
-            .then(data => this.saisons = [data])*/
-
-
     }
 }
 </script>
