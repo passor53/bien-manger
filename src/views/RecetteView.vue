@@ -18,9 +18,12 @@
                 <h2>Description</h2>
                 {{$store.getters['descriptions/getDescriptionnameFromId'](description)}}
             </div>
-            <div class="step">
-                <h2>Etapes</h2>
-                <Router-link to="/step">{{ recette.fields.Etape }}</Router-link>
+            <h2>Etapes</h2>
+            <div class="step" v-for="step in recette.fields.Etape" :key="step">
+                <b>{{$store.getters['steps/getFromId'](step)?.name}}</b>
+                <br>
+                {{$store.getters['steps/getFromId'](step)?.description}}
+
             </div>
             <div id="recipe-return">
                 <input type="button" value="Retour" onclick="history.go(-1)">
@@ -42,6 +45,7 @@ export default {
     created() {
         this.$store.dispatch("saisons/initializeSaisons")
         this.$store.dispatch('names/initializeRecettes')
+        this.$store.dispatch('steps/initializeSteps')
         this.$store.dispatch('descriptions/initializeDescriptions')
 
         console.log("La naissance du component")
@@ -74,7 +78,7 @@ p {
 }
 
 .season {
-    color: yellow;
+    color: whitesmoke;
 }
 
 .description {
