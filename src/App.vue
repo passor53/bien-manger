@@ -26,7 +26,7 @@ export default {
 body {
   border-collapse: collapse;
   margin: 0;
-  padding: 0;
+  padding-bottom: 10vh;
 
   /* make it look decent enough */
   background: rgb(32, 32, 32);

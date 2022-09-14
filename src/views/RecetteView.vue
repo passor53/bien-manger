@@ -1,7 +1,7 @@
 <template>
     <div class="blockRecipeImage">
         <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
-            {{$store.getters['names/getRecettenameFromId'](recette.id).name}}
+            {{$store.getters['names/getRecettenameFromId'](recette.id)?.name}}
         </h1>
         <h2>{{$store.getters['names/toto']}}</h2>
         <div id="list-recipe" v-for="recette in recettes" :key="recette">
@@ -15,9 +15,9 @@
             </div>
             <div class="description" v-for="description in recettes" :key="description">
                 <h2>Description</h2>
-                {{$store.getters['descriptions/getDescriptionnameFromId'](description.id).name}}
+                {{$store.getters['descriptions/getDescriptionnameFromId'](description.id)?.name}}
             </div>
-            <div class="ingredient" v-for="ingredient in recettes" :key="ingredient">
+            <div class="ingredient" v-for="ingredient in recette.fields.Ingredient" :key="ingredient">
                 <h2>Ingredients</h2>
                 {{$store.getters['ingredients/getIngredientnameFromId'](ingredient.id)?.name}}
             </div>
@@ -50,7 +50,7 @@ export default {
         this.$store.dispatch('names/initializeRecettes')
         this.$store.dispatch('steps/initializeSteps')
         this.$store.dispatch('descriptions/initializeDescriptions')
-        this.$store.dispatch('ingredients/initalizeIngredients')
+        this.$store.dispatch('ingredients/initializeIngredients')
 
         console.log("La naissance du component")
         var myHeaders = new Headers();
