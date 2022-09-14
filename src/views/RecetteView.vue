@@ -17,11 +17,11 @@
                 <h2>Description</h2>
                 {{$store.getters['descriptions/getDescriptionnameFromId'](description.id)?.name}}
             </div>
-            <div class="ingredient" v-for="ingredient in recette.fields.Ingredient" :key="ingredient">
-                <h2>Ingredients</h2>
+
+            <h2>Ingredients</h2>
+            <div class="ingredient" v-for="ingredient in recette.fields.Recette_has_Ingredient" :key="ingredient">
                 {{$store.getters['ingredients/getIngredientnameFromId'](ingredient)}}
             </div>
-
             <h2>Etapes</h2>
             <div class="step" v-for="step in recette.fields.Etape" :key="step">
                 <b>{{$store.getters['steps/getFromId'](step)?.name}}</b>

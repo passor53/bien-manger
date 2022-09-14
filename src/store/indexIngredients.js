@@ -5,7 +5,7 @@ export default {
     },
     getters: {
         getIngredientnameFromId: (state) => (name) => {
-            let i = state.ingredients.filter(ingredient => ingredient.id == name)
+            let i = state.ingredients.filter(ingredients => ingredients.id == name)
             console.log('etat de i')
             console.log(i)
             return i
@@ -30,7 +30,7 @@ export default {
                     let tingredient = [];
                     for (let index = 0; index < data.records.length; index++) {
                         const db_record = data.records[index];
-                        tingredient.push({ id_recette: db_record.id, id_ingredient: db_record.fields.Recette_has_Ingredient })
+                        tingredient.push({ id_recette: db_record.id, id_ingredient: db_record.fields.Recette_has_Ingredient, name: db_record.fields.Name })
                     }
                     console.log("VUEX: Initialisation des ingredients")
                     console.log(tingredient)
