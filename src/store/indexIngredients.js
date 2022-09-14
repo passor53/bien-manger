@@ -27,10 +27,13 @@ export default {
             fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette_has_Ingredient", options)
                 .then(data => data.json())
                 .then(data => {
+                    /* console.log("data records")
+                     context.commit(data.records)
+                     console.log(data.records)*/
                     let tingredient = [];
                     for (let index = 0; index < data.records.length; index++) {
                         const db_record = data.records[index];
-                        tingredient.push({ id: db_record.id, ingredient: db_record.fields.Ingredient[index] })
+                        tingredient.push({ id: db_record.id, ingredient_id: [...db_record.fields.Ingredient], quantity: db_record.fields.Quantity, unit: db_record.fields.Unit })
                     }
                     console.log("VUEX: Initialisation des ingredients")
                     console.log(tingredient)
