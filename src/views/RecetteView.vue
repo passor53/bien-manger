@@ -19,8 +19,8 @@
             </div>
 
             <h2>Ingredients</h2>
-            <div class="ingredient" v-for="ingredient in recette.fields.Recette_has_Ingredient" :key="ingredient">
-                {{$store.getters['ingredients/getIngredientnameFromId'](ingredient)}}
+            <div class="ingredient" v-for="relation_id in recette.fields.Recette_has_Ingredient" :key="relation_id">
+                {{$store.getters['ingredients/getFromRelationalLink'](relation_id).name }}
             </div>
             <h2>Etapes</h2>
             <div class="step" v-for="step in recette.fields.Etape" :key="step">

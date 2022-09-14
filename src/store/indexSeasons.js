@@ -5,7 +5,6 @@ export default {
     },
     getters: {
         getSaisonnameFromId: (state) => (id) => {
-
             if (state.saisons.length > 0) {
                 console.log(state.saisons)
                 console.log(id)
