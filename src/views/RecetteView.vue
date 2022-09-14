@@ -17,7 +17,7 @@
                 <h2>Description</h2>
                 {{$store.getters['descriptions/getDescriptionnameFromId'](description.id)?.name}}
             </div>
-            <div class="ingredient" v-for="ingredient in recette.fields.Ingredient" :key="ingredient">
+            <div class="ingredient" v-for="ingredient in recettes" :key="ingredient">
                 <h2>Ingredients</h2>
                 {{$store.getters['ingredients/getIngredientnameFromId'](ingredient)}}
             </div>
@@ -44,6 +44,7 @@ export default {
     data() {
         return {
             recettes: [],
+            ingredients: []
         }
     },
     created() {
@@ -61,6 +62,7 @@ export default {
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/" + id_de_la_recette, options)
             .then(data => data.json())
             .then(data => this.recettes = [data])
+
     }
 }
 </script>
