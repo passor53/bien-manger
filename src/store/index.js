@@ -4,6 +4,7 @@ import steps from './indexSteps'
 import saisons from './indexSeasons'
 import descriptions from './indexDescriptions'
 import ingredients from './indexIngredients'
+import users from './indexUsers'
 export default createStore({
   state: {
 
@@ -22,6 +23,7 @@ export default createStore({
     steps,
     saisons,
     descriptions,
-    ingredients
+    ingredients,
+    users
   }
 })

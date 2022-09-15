@@ -1,18 +1,13 @@
 export default {
     namespaced: true,
     state: {
-        utilisateurs: []
+        users: []
     },
     getters: {
         getUsersFromId: (state) => (id) => {
-
-            if (state.users.length > 0) {
-                console.log(state.users)
-                console.log(id)
-                let s = state.users.filter(user => user.id == id)
-                return s[0]?.name
-            }
-            return null
+            let s = state.users.find(user => user.id == id)
+            console.log("zgnzog")
+            return s
         },
         users(state) {
             return state.users
@@ -34,7 +29,7 @@ export default {
                     let tuser = [];
                     for (let index = 0; index < data.records.length; index++) {
                         const db_record = data.records[index];
-                        tsaison.push({ id: db_record.id, name: db_record.fields.Name })
+                        tuser.push({ id: db_record.id, name: db_record.fields.Name, utilisateur: db_record.fields.Utilisateur })
                     }
                     console.log("VUEX: Initialisation des utilisateurs")
                     console.log(tuser)

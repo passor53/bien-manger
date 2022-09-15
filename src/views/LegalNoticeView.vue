@@ -8,7 +8,7 @@
 <ul>
 <li>Adresse : https://www.bien-manger.fr</li>
 <li>Date de création : 01/09/2022</li>
-<li>Auteur : Pascal Sorel-Julé / Florian  Gabillard</li>
+<li>Auteur : Pascal Sorel-Julé / Florian Gabillard</li>
 <li>Adresse : Koï center – Louverné (53950)</li>
 </ul>
 <p>Siret : 76498356794582<br>

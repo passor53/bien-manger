@@ -25,6 +25,11 @@ const routes = [
   },
 
   {
+    path: '/register',
+    name: 'register',
+  },
+
+  {
     path: '/about',
     name: 'about',
     component: AboutView,

@@ -25,4 +25,8 @@ export default {
   margin-top: 5vh;
   text-align: center;
 }
+
+img {
+  border-radius: 10px;
+}
 </style>

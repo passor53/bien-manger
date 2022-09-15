@@ -18,7 +18,11 @@
     <p>Alors, tous à vos tabliers et bonne visite à vous.
       Cordialement,
       Bien-manger.com</p>
-
+  </div>
+  <div class="socialNetworkLogo">
+    <img class="logo-facebook" alt="Logo facebook" src="../assets/icone-contact/icons8-facebook.svg" />
+    <img class="logo-twitter" alt="Logo twitter" src="../assets/icone-contact/icons8-twitter.png" />
+    <img class="logo-instagram" alt="Logo twitter" src="../assets/icone-contact/icons8-instagram.svg" />
   </div>
 </template>
 
@@ -36,5 +40,9 @@ ul {
   font-style: italic;
   padding: 0 3vw 0 3vw;
   list-style-type: none;
+}
+
+.socialNetworkLogo {
+  margin-top: 20vh;
 }
 </style>

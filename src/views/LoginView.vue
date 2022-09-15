@@ -3,13 +3,13 @@
   <form id="contact" action="" method="post">
     <h3>Connexion</h3>
     <fieldset>
-      <input placeholder="Pseudo" type="text" tabindex="1" required autofocus>
+      <input placeholder="Inserez votre email" type="email" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Mot de passe" type="text" tabindex="2" required>
+      <input placeholder="Inserez votre mot de passe" type="text" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Envoyer">Envoyer</button>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Envoyer">Se connecter</button>
       <input type="button" class="retour" value="Retour" onclick="history.go(-1)">
     </fieldset>
   </form>
@@ -27,7 +27,7 @@ export default {
         this.$store.dispatch("initializeUsers")
 
         let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
-        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Utilisateur?maxRecords=3&view=Grid%20view", options)
+        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Utilisateur", options)
             .then(data => data.json())
             .then(data => this.users = data.records)
     }
@@ -77,7 +77,8 @@ body {
     background: #F9F9F9;
     padding: 25px;
     margin: 150px 0;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
 }
 
 #contact h3 {
@@ -85,6 +86,7 @@ body {
     font-size: 30px;
     font-weight: 300;
     margin-bottom: 30px;
+    color: black;
 
 }
 

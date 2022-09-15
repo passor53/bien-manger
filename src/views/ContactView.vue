@@ -71,6 +71,7 @@ body {
   padding: 25px;
   margin: 150px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
 }
 
 #contact h3 {
@@ -182,5 +183,13 @@ fieldset {
 
 :-ms-input-placeholder {
   color: #888;
+}
+
+h3 {
+  color: black;
+}
+
+h4 {
+  color: black;
 }
 </style>

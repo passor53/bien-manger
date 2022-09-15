@@ -49,10 +49,8 @@
             <!-- <img class="logo_bm" alt="Logo de Bien-Manger" src="../assets/bine-manger.png" /> -->
         </div>
         <div class="bpseudo">
-            <img class="logo-user" alt="Logo utilisateur" src="../assets/logo-user.svg" />
-            <p class="ppseudo">
-                <Router-Link to="/login">Se connecter</Router-Link>{{ pseudo }}
-            </p>
+            <img class="logo-user" alt="Logo utilisateur" src="../assets/icone-utilisateur.svg" />
+            <Router-Link class="buttonConnect" to="/login">Se connecter</Router-Link>
         </div>
     </header>
 
@@ -82,6 +80,7 @@ export default {
 img {
     max-width: 14vw;
     max-height: 10vh;
+    margin-right: 0.5em;
 }
 
 .bpseudo {
@@ -93,7 +92,8 @@ img {
 
 img.logo-user {
     max-width: 14vw;
-    max-height: 9vh;
+    max-height: 6vh;
+
 }
 
 p {
@@ -107,7 +107,9 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #e8b5db;
+    background-color: whitesmoke;
+    border-bottom: 1px solid black;
+    border-radius: 0 0 15px 15px;
 
 }
 
@@ -212,25 +214,29 @@ p {
  */
 #menu {
     position: absolute;
-    width: 300px;
+    width: 340px;
     margin: -100px;
     padding: 50px;
     padding-top: 125px;
 
-    background: #ededed;
+    background: whitesmoke;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    border-radius: 0 0 15px 0;
+    border: 1px solid black;
 }
 
 #menu li {
     padding: 10px 0;
     font-size: 22px;
+}
+
+#menu li:hover {
+    text-decoration: underline;
 }
 
 /*
@@ -255,6 +261,28 @@ p {
 
 #nav a.router-link-exact-active {
     color: #42b983;
+}
+
+.buttonConnect {
+    height: 2em;
+    display: inline-block;
+    padding: 0.15em 1.2em;
+    border: 0.1em solid #000000;
+    margin-right: 0.5em;
+    border-radius: 1em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300em;
+    color: #000000;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.buttonConnect:hover {
+    color: #ffffff;
+    background-color: #000000;
+    text-decoration: underline;
 }
 
 .logo-user {

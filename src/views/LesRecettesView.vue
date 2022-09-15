@@ -61,16 +61,13 @@ a {
 
 h1.nameRecipe {
     text-align: center;
-    border-bottom: 1px solid whitesmoke;
 }
 
 .season_recipe {
+
     border: solid 1px black;
-    border-radius: 0px 0px 19px 19px;
     border: solid 1px whitesmoke;
-    background-color: black;
-    opacity: 90%;
-    color: yellow;
+    color: black;
 }
 
 .blockImage {

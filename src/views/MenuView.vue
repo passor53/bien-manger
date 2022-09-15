@@ -35,6 +35,7 @@ export default {
     width: 20em;
     height: 15em;
     border: 1px solid whitesmoke;
+    border-radius: 20px;
 }
 
 /* p .entry {
@@ -53,9 +54,5 @@ p {
     background-color: black;
     /* opacity: 50%; */
     color: white;
-}
-
-.cell:hover {
-    cursor: pointer;
 }
 </style>

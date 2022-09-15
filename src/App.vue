@@ -27,9 +27,9 @@ body {
   border-collapse: collapse;
   margin: 0;
   padding-bottom: 10vh;
-
-  /* make it look decent enough */
-  background: rgb(32, 32, 32);
+  background-image: url(./assets/463.jpg);
+  background-repeat: repeat;
+  background-size: cover;
   color: whitesmoke;
   font-family: "Avenir Next", "Avenir", sans-serif;
   text-align: center;
