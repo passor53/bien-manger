@@ -6,7 +6,6 @@ export default {
     getters: {
         getDescriptionnameFromId: (state) => (id) => {
             let d = state.descriptions.find(name => name.id == id)
-            console.log(d)
             return d
 
         },
@@ -32,8 +31,6 @@ export default {
                         const db_record = data.records[index];
                         tdescription.push({ id: db_record.id, name: db_record.fields.Description })
                     }
-                    console.log("VUEX: Initialisation des descriptions")
-                    console.log(tdescription)
                     context.commit("setDescription", tdescription)
                 })
         }

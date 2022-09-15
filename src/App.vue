@@ -41,7 +41,8 @@ h1 {
 }
 
 h2 {
-  color: #87e7e1;
+  color: rgb(182, 93, 42);
+  font-weight: bold;
   ;
 }
 

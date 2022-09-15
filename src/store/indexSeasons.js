@@ -35,8 +35,6 @@ export default {
                         const db_record = data.records[index];
                         tsaison.push({ id: db_record.id, name: db_record.fields.Name })
                     }
-                    console.log("VUEX: Initialisation des saisons")
-                    console.log(tsaison)
                     context.commit("setSaisons", tsaison)
                 })
         }

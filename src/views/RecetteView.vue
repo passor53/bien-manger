@@ -3,31 +3,42 @@
         <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
             {{$store.getters['names/getRecettenameFromId'](recette.id)?.name}}
         </h1>
-        <h2>{{$store.getters['names/toto']}}</h2>
+        <div class="block-img-buttons">
+            <img class="img-recipe" alt="Image de la recette" src="../assets/recette.jpg" />
+            <div class="Buttons-del-put">
+                <input class="button" type="button" value="Supprimer" />
+                <input class="button" type="button" value="Modifier" />
+            </div>
+        </div>
         <div id="list-recipe" v-for="recette in recettes" :key="recette">
-            <img class="mini-img" src="" alt="" />
-            <div class="season">
-                <h2>Saison</h2>
-                <div class="season_recipe" v-for="saison in recette.fields.Saison" :key="saison">
-                    {{$store.getters['saisons/getSaisonnameFromId'](saison)}}
+
+            <div class="block-season-description">
+                <div class="description" v-for="description in recettes" :key="description">
+                    <h2>Description</h2>
+                    {{$store.getters['descriptions/getDescriptionnameFromId'](description.id)?.name}}
                 </div>
-
+                <div class="season">
+                    <h2 class="title-saison">Saison</h2>
+                    <div class="season_recipe" v-for="saison in recette.fields.Saison" :key="saison">
+                        {{$store.getters['saisons/getSaisonnameFromId'](saison)}}
+                    </div>
+                </div>
             </div>
-            <div class="description" v-for="description in recettes" :key="description">
-                <h2>Description</h2>
-                {{$store.getters['descriptions/getDescriptionnameFromId'](description.id)?.name}}
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+                <div class="ingredient" v-for="relation_id in recette.fields.Recette_has_Ingredient" :key="relation_id">
+                    {{$store.getters['ingredients/getFromRelationalLink'](relation_id).name }}
+                </div>
             </div>
 
-            <h2>Ingredients</h2>
-            <div class="ingredient" v-for="relation_id in recette.fields.Recette_has_Ingredient" :key="relation_id">
-                {{$store.getters['ingredients/getFromRelationalLink'](relation_id).name }}
-            </div>
-            <h2>Etapes</h2>
-            <div class="step" v-for="step in recette.fields.Etape" :key="step">
-                <b>{{$store.getters['steps/getFromId'](step)?.name}}</b>
-                <br>
-                {{$store.getters['steps/getFromId'](step)?.description}}
+            <div class="steps">
+                <h2>Etapes</h2>
+                <div class="step" v-for="step in recette.fields.Etape" :key="step">
+                    <b>{{$store.getters['steps/getFromId'](step)?.name}}</b>
+                    <br>
+                    {{$store.getters['steps/getFromId'](step)?.description}}
 
+                </div>
             </div>
             <div id="recipe-return">
                 <input type="button" value="Retour" onclick="history.go(-1)">
@@ -44,7 +55,8 @@ export default {
     data() {
         return {
             recettes: [],
-            ingredients: []
+            ingredients: [],
+
         }
     },
     created() {
@@ -67,8 +79,49 @@ export default {
 }
 </script>
 <style scoped>
+.nameRecipe {
+    margin: 2vh 0 2vh 0;
+    text-decoration: underline;
+    padding-bottom: 2vh;
+}
+
+.img-recipe {
+    border-radius: 5vw;
+    border: solid 1px gray;
+    width: 150px;
+    height: 150px;
+}
+
+.block-img-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2vh 0 2vh 0;
+}
+
+.Buttons-del-put {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    border-radius: 4vw;
+    margin: 1vh 0 1vh 0;
+}
+
+.block-season-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5vw;
+    margin: 4vh 2vw 4vh 2vw;
+
+}
+
 h2 {
     font-size: large;
+    color: crimson;
 }
 
 h1 a {
@@ -80,20 +133,88 @@ a {
     color: whitesmoke;
 }
 
-p {
-    color: whitesmoke;
+.season {
+    color: yellow;
+    padding: 1vh 2vw 1vh 2vw;
+    margin-right: 2vw;
+    padding-top: 2.5vh;
 }
 
-.season {
-    color: whitesmoke;
+.title-saison {
+    font-size: x-large;
 }
 
 .description {
-    color: whitesmoke;
+    background-color: rgb(255, 249, 212);
+    border: solid 1px black;
+    color: black;
+    border-radius: 5vw;
+    margin-right: 2vw;
+    padding: 1vh 2vw 1vh 2vw;
+    box-shadow: 4px 2px 2px gray;
+    margin-left: 2vw;
+    margin-right: 5vw;
 }
 
-.nameRecipe {
-    border-bottom: 1px solid black;
+.ingredients {
+    background-image: url(../assets/feuille.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: black;
+    margin: 2vh 2vw 2vh 2vw;
+    padding: 17vh 4vw 10vh 4vw;
+}
+
+@media screen and (max-width: 733px) {
+    .ingredients {
+        background-size: 85%;
+        background-position: center;
+    }
+}
+
+@media screen and (width: 900px) {
+    .ingredients {
+        background-size: 70%;
+        background-position: center;
+    }
+}
+
+@media screen and (width: 1266px) {
+    .ingredients {
+        background-size: 80%;
+        background-position: center;
+    }
+}
+
+@media screen and (width: 1366px) {
+    .ingredients {
+        background-size: 30%;
+        background-position: center;
+    }
+
+    .img-recipe {
+        border-radius: 3vw;
+    }
+}
+
+.steps {
+    background-image: url(../assets/tableau-cuisine.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 6vh 2vw 5vh 2vw;
+    border: solid 1px whitesmoke;
+    margin: 4vh 4vw 4vh 4vw;
+}
+
+.step {
+    border: dashed 1px whitesmoke;
+    border-left: none;
+    border-right: none;
+    padding: 1vh 2vw 1vh 2vw;
+    margin: 0 2vw 0 2vw;
 }
 
 ul {
@@ -109,13 +230,9 @@ ul {
 }
 
 #step {
-    position: relative;
+
     align-content: center;
     padding-bottom: 100%;
-}
-
-#recipe-return {
-    border-bottom: 1px solid black;
 }
 
 #footer {

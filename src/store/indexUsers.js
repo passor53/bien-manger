@@ -31,8 +31,6 @@ export default {
                         const db_record = data.records[index];
                         tuser.push({ id: db_record.id, name: db_record.fields.Name, utilisateur: db_record.fields.Utilisateur })
                     }
-                    console.log("VUEX: Initialisation des utilisateurs")
-                    console.log(tuser)
                     context.commit("setUsers", tuser)
                 })
         }
