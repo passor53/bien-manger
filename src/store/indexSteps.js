@@ -31,8 +31,6 @@ export default {
                         const db_record = data.records[index];
                         tstep.push({ id: db_record.id, name: db_record.fields.Name, description: db_record.fields.Description })
                     }
-                    console.log("VUEX: Initialisation des étapes")
-                    console.log(tstep)
                     context.commit("setStep", tstep)
                 })
         }

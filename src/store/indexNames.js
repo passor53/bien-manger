@@ -31,8 +31,6 @@ export default {
                         const db_record = data.records[index];
                         tname.push({ id: db_record.id, name: db_record.fields.Name })
                     }
-                    console.log("VUEX: Initialisation des recettes")
-                    console.log(tname)
                     context.commit("setName", tname)
                 })
         }
