@@ -168,6 +168,38 @@ a {
     padding: 17vh 4vw 10vh 4vw;
 }
 
+@media screen and (max-width: 733px) {
+    .ingredients {
+        background-size: 85%;
+        background-position: center;
+    }
+}
+
+@media screen and (width: 900px) {
+    .ingredients {
+        background-size: 70%;
+        background-position: center;
+    }
+}
+
+@media screen and (width: 1266px) {
+    .ingredients {
+        background-size: 80%;
+        background-position: center;
+    }
+}
+
+@media screen and (width: 1366px) {
+    .ingredients {
+        background-size: 30%;
+        background-position: center;
+    }
+
+    .img-recipe {
+        border-radius: 3vw;
+    }
+}
+
 .steps {
     background-image: url(../assets/tableau-cuisine.jpg);
     background-repeat: no-repeat;
