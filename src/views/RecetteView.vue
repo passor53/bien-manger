@@ -81,13 +81,21 @@ export default {
     },
     methods: {
         deleted(index) {
-            let response = confirm("Êtes-vous sûr(e) de vouloir supprimer la recette ?");
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "Bearer keyaN8glHhIloJltf")
+            let id_de_la_recette = this.$route.params.id
+            let response = confirm("Êtes-vous sûr(e) de vouloir supprimer la recette ?",);
+            let options = { headers: myHeaders, method: 'DELETE' }
+            fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/" + id_de_la_recette, options)
+                .then(data => data.json())
+                .then(data => this.recettes = [data])
             console.log(response)
             // confirmer que ce n'est pas une mauvaise manip
             // il faudrait plutot gérer ca avec l'id de la recette
             // fetch en method: DELETE
             // redirection
             this.recettes.splice(index, 1)
+            this.$router.push({ path: '/recipes' })
         }
     }
 }
