@@ -66,10 +66,10 @@ h1.nameRecipe {
 }
 
 .season_recipe {
-
-    border: solid 1px black;
     border: solid 1px whitesmoke;
-    color: black;
+    color: yellow;
+    background-color: black;
+    opacity: 90%;
 }
 
 .blockImage {
