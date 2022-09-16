@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import RecipeView from '../views/RecetteView.vue'
-import TipView from '../views/TipView.vue'
 import MenuView from '../views/MenuView.vue'
 import RecipesView from '../views/LesRecettesView.vue'
 import LoginView from '../views/LoginView.vue'
@@ -57,12 +56,6 @@ const routes = [
     path: '/season/:id',
     name: 'season',
     component: SeasonView
-  },
-
-  {
-    path: '/tip',
-    name: 'tip',
-    component: TipView
   },
 
   {

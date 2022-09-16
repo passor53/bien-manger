@@ -29,13 +29,15 @@ export default {
         this.$store.dispatch("saisons/initializeSaisons")
 
         let options = { headers: new Headers({ "Authorization": "Bearer keyaN8glHhIloJltf" }) }
-        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette?maxRecords=3&view=Grid%20view", options)
+        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/", options)
             .then(data => data.json())
             .then(data => this.recettes = data.records)
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison?maxRecords=3&view=Grid%20view", options)
             .then(data => data.json())
             .then(data => this.saisons = [data])
-    }
+    },
+
+
 }
 
 

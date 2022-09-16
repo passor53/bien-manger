@@ -6,7 +6,9 @@
         <div class="block-img-buttons">
             <img class="img-recipe" alt="Image de la recette" src="../assets/recette.jpg" />
             <div class="Buttons-del-put">
-                <input class="button" type="button" value="Supprimer" />
+                <div v-for="(index) in recettes" :key="index">
+                    <input class="button" type="button" value="Supprimer" @click="deleted(index)" />
+                </div>
                 <input class="button" type="button" value="Modifier" />
             </div>
         </div>
@@ -50,6 +52,7 @@
 </template>
 
 <script>
+
 export default {
     name: "LaRecetteView",
     data() {
@@ -75,8 +78,20 @@ export default {
             .then(data => data.json())
             .then(data => this.recettes = [data])
 
+    },
+    methods: {
+        deleted(index) {
+            let response = confirm("Êtes-vous sûr(e) de vouloir supprimer la recette ?");
+            console.log(response)
+            // confirmer que ce n'est pas une mauvaise manip
+            // il faudrait plutot gérer ca avec l'id de la recette
+            // fetch en method: DELETE
+            // redirection
+            this.recettes.splice(index, 1)
+        }
     }
 }
+
 </script>
 <style scoped>
 .nameRecipe {
