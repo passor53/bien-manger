@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/Bien-Manger.jpg">
+    <img alt="Vue logo" src="../assets/bien-manger.png">
     <HelloWorld msg="Le site de référence pour partager ses recettes" />
   </div>
 

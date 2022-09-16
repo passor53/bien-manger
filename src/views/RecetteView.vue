@@ -106,7 +106,8 @@ export default {
 
 .img-recipe {
     border-radius: 5vw;
-    border: solid 1px gray;
+    border: solid 1px whitesmoke;
+    box-shadow: 2px 1px rgb(49, 49, 49);
     width: 150px;
     height: 150px;
 }
@@ -138,6 +139,17 @@ export default {
 
 }
 
+.season {
+    border: solid 1px rgb(44, 43, 43);
+    border-radius: 4vw 4vw 2vw 2vw;
+    background-color: rgb(44, 43, 43);
+    box-shadow: 2px 1px coral;
+    color: yellow;
+    padding: 1vh 2vw 1vh 2vw;
+    margin-right: 2vw;
+    padding-top: 2.5vh;
+}
+
 h2 {
     font-size: large;
     color: crimson;
@@ -152,25 +164,18 @@ a {
     color: whitesmoke;
 }
 
-.season {
-    color: yellow;
-    padding: 1vh 2vw 1vh 2vw;
-    margin-right: 2vw;
-    padding-top: 2.5vh;
-}
-
 .title-saison {
     font-size: x-large;
 }
 
 .description {
     background-color: rgb(255, 249, 212);
-    border: solid 1px black;
+    border: solid 1px rgb(255, 249, 212);
     color: black;
-    border-radius: 5vw;
+    border-radius: 5vw 5vw 2vw 2vw;
     margin-right: 2vw;
     padding: 1vh 2vw 1vh 2vw;
-    box-shadow: 4px 2px 2px gray;
+    box-shadow: 2px 1px coral;
     margin-left: 2vw;
     margin-right: 5vw;
 }
