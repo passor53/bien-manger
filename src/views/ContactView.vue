@@ -18,6 +18,11 @@
     </fieldset>
   </form>
 </div>
+<div class="socialNetworkLogo">
+    <img class="logo-facebook" alt="Logo facebook" src="../assets/icone-contact/icons8-facebook.svg" />
+    <img class="logo-twitter" alt="Logo twitter" src="../assets/icone-contact/icons8-twitter.png" />
+    <img class="logo-instagram" alt="Logo twitter" src="../assets/icone-contact/icons8-instagram.svg" />
+  </div>
 </template>
 <script>
 
@@ -55,6 +60,7 @@ body {
   width: 100%;
   margin: auto;
   position: relative;
+  bottom: 20vh;
 }
 
 #contact input[type="text"],
@@ -191,5 +197,10 @@ h3 {
 
 h4 {
   color: black;
+}
+
+.socialNetworkLogo {
+  position: relative;
+  bottom: 40vh;
 }
 </style>

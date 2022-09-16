@@ -43,6 +43,6 @@ ul {
 }
 
 .socialNetworkLogo {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 </style>

@@ -38,11 +38,6 @@ export default {
     border-radius: 20px;
 }
 
-/* p .entry {
-    border: 2px solid black;
-    position: fixed;
-} */
-
 @media screen and (max-width: 1024px) {
     .cell {
         margin: 1em auto;

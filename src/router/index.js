@@ -69,7 +69,6 @@ const routes = [
     name: 'contact',
     component: ContactView
   },
-
   {
     path: '/legalnotice',
     name: 'legalnotice',

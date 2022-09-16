@@ -39,20 +39,6 @@ export default {
 
                     context.commit("setIngredients", tingredient)
                 })
-
-
-            /*fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Image", options)
-                 .then(data => data.json())
-                 .then(data => {
-                     let timage = [];
-                     for (let index = 0; index < data.records.length; index++) {
-                         const db_record = data.records[index];
-                         timage.push({ id_image: db_record.id, url_image: db_record.fields.url })
-                     }
-                     console.log("VUEX: Initialisation des images")
-                     console.log(timage)
-                     context.commit("setImages", timage)
-                 })*/
         }
     },
     modules: {

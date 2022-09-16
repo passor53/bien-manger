@@ -43,7 +43,8 @@ h1 {
 h2 {
   color: #aadbd8;
   font-weight: bold;
-  ;
+  font-size: 25px;
+  text-decoration: underline;
 }
 
 h4 {

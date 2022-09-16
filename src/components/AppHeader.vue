@@ -132,10 +132,6 @@ p {
     transition: color 0.3s ease;
 }
 
-#menuToggle a:hover {
-    color: tomato;
-}
-
 
 #menuToggle input {
     display: block;

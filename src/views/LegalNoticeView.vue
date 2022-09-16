@@ -69,4 +69,9 @@ export default {
 ul {
     list-style-type: none;
 }
+
+h1 {
+    text-decoration: underline;
+    font-family: 'titillium-regular-webfont';
+}
 </style>
