@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(0, 0, 0);
+  color: #aadbd8;
   font-weight: bold;
   font-size: 25px;
   text-decoration: underline;
