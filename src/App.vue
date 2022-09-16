@@ -27,7 +27,7 @@ body {
   border-collapse: collapse;
   margin: 0;
   padding-bottom: 10vh;
-  background-image: url("./assets/4633.jpg");
+  background-image: url(./assets/4633.jpg);
   background-repeat: repeat;
   background-size: cover;
   color: whitesmoke;
@@ -37,7 +37,7 @@ body {
 
 h1 {
   margin-top: 5vh;
-  color: #87e7e1;
+  color: #c4fffb;
 }
 
 h2 {
