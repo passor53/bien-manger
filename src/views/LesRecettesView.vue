@@ -46,7 +46,7 @@ export default {
 <style scoped>
 p a {
     text-decoration: none;
-    color: #87e7e1;
+    color: #ffffff;
 }
 
 a {

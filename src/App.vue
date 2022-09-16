@@ -41,9 +41,10 @@ h1 {
 }
 
 h2 {
-  color: rgb(182, 93, 42);
+  color: rgb(0, 0, 0);
   font-weight: bold;
-  ;
+  font-size: 25px;
+  text-decoration: underline;
 }
 
 h4 {
