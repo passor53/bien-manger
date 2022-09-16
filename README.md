@@ -31,7 +31,7 @@ et permettant de les partager, nous avons crée ce site.
 
 C'est un site dynamique  "back-end et front-end"
 
-- il à été concu avec vuejs 3 et node js.
+- il à été concu avec cli.vuejs 3 et node js.
 - le serveur pour la base de données utilisé est airtable.
 - On y trouve aussi le zoning du site.
 
