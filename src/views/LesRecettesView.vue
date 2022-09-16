@@ -32,7 +32,7 @@ export default {
         fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Recette/", options)
             .then(data => data.json())
             .then(data => this.recettes = data.records)
-        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison?maxRecords=3&view=Grid%20view", options)
+        fetch("https://api.airtable.com/v0/appT0bvntx0RS1M8p/Saison/", options)
             .then(data => data.json())
             .then(data => this.saisons = [data])
     },

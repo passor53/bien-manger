@@ -95,6 +95,7 @@ export default {
             // fetch en method: DELETE
             // redirection
             this.recettes.splice(index, 1)
+            this.$router.push({ path: '/recipes' })
         }
     }
 }
