@@ -9,6 +9,8 @@ import AboutView from '../views/AboutView.vue'
 import LegalNoticeView from '../views/LegalNoticeView.vue'
 import SeasonView from '../views/LesRecettesView.vue'
 import SeasonsView from '../views/LesRecettesView.vue'
+import TipView from '../views/TipView.vue'
+import YouShallNotPass from '../views/YouShallNotPass.vue'
 
 const routes = [
   {
@@ -59,6 +61,12 @@ const routes = [
   },
 
   {
+    path: '/tip',
+    name: 'tip',
+    component: TipView
+  },
+
+  {
     path: '/menu',
     name: 'menu',
     component: MenuView
@@ -73,6 +81,12 @@ const routes = [
     path: '/legalnotice',
     name: 'legalnotice',
     component: LegalNoticeView
+  },
+
+  {
+    path: '/youshallnotpass',
+    name: 'saxo',
+    component: YouShallNotPass
   }
 ]
 

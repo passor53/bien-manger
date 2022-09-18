@@ -1,4 +1,5 @@
 <template>
+    <h4>🚧👷 PAGE EN COURS DE CONSTRUCTION 👷🚧</h4>
     <div class="blockImage">
         <div class="cell">
             <div>
@@ -31,7 +32,7 @@ export default {
 
     margin-left: 6em;
     margin-bottom: 5em;
-    margin-top: 8em;
+    margin-top: 5em;
     width: 20em;
     height: 15em;
     border: 1px solid whitesmoke;
@@ -49,5 +50,11 @@ p {
     background-color: black;
     /* opacity: 50%; */
     color: white;
+}
+
+h4 {
+    font-size: 50px;
+    color: rgb(255, 128, 0);
+    margin-top: 5vh;
 }
 </style>
