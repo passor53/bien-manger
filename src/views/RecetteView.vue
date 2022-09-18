@@ -1,8 +1,13 @@
 <template>
     <div class="blockRecipeImage">
-        <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
-            {{$store.getters['names/getRecettenameFromId'](recette.id)?.name}}
-        </h1>
+        <div class="conteneur-h1-recipes">
+            <div class="conteneur-img-recipe">
+                <img class="enseigne" alt="enseigne avec le titre a l'interieur" src="../assets/enseigne.png" />
+            </div>
+            <h1 class="nameRecipe" v-for="recette in recettes" :key="recette">
+                {{$store.getters['names/getRecettenameFromId'](recette.id)?.name}}
+            </h1>
+        </div>
         <div class="block-img-buttons">
             <img class="img-recipe" alt="Image de la recette" src="../assets/recette.jpg" />
             <div class="Buttons-del-put">
@@ -93,15 +98,25 @@ export default {
             this.recettes.splice(index, 1)
             this.$router.push({ path: '/recipes' })
         }
+
     }
 }
 
 </script>
 <style scoped>
+.conteneur-h1-recipes {
+    z-index: 1;
+}
+
+.enseigne {
+    width: 50vw;
+    z-index: 2;
+}
+
 .nameRecipe {
-    margin: 2vh 0 2vh 0;
+    z-index: 3;
+    font-size: 100%;
     text-decoration: underline;
-    padding-bottom: 2vh;
 }
 
 .img-recipe {

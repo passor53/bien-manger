@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/Bien-Manger.jpg">
+    <img alt="Vue logo" src="../assets/bien-manger.png">
     <Home msg="Le site de référence pour partager ses recettes" />
   </div>
   <svg class="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">

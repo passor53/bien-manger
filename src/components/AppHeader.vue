@@ -44,10 +44,6 @@
                 </ul>
             </div>
         </nav>
-        <div>
-            <a class="logo_bm" href="/"><img src="../assets/bine-manger.png" alt="tonimage" /></a>
-            <!-- <img class="logo_bm" alt="Logo de Bien-Manger" src="../assets/bine-manger.png" /> -->
-        </div>
         <div class="bpseudo">
             <img class="logo-user" alt="Logo utilisateur" src="../assets/icone-utilisateur.svg" />
             <Router-Link class="buttonConnect" to="/login">Se connecter</Router-Link>
@@ -107,10 +103,9 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: whitesmoke;
-    border-bottom: 1px solid black;
-    border-radius: 0 0 15px 15px;
-
+    background-size: 100% 100%;
+    background-image: url(../assets/header.png);
+    background-repeat: no-repeat;
 }
 
 #menuToggle {

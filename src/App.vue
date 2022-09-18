@@ -27,7 +27,9 @@ body {
   border-collapse: collapse;
   margin: 0;
   padding-bottom: 10vh;
-  background-image: url(./assets/4633.jpg);
+  background-color: rgb(43, 42, 42);
+  background-image: url(./assets/arriere-plan.jpg);
+  background-repeat: no-repeat;
   background-repeat: repeat;
   background-size: cover;
   color: whitesmoke;

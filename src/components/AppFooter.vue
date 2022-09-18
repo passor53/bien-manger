@@ -24,11 +24,10 @@ footer {
     bottom: 0;
     width: 100vw;
     height: 8vh;
-    background-color: whitesmoke;
+    background-size: 100% 102%;
+    background-image: url(../assets/header.png);
     justify-content: center;
     align-items: center;
-    border-top: 1px solid black;
-    border-radius: 15px 15px 0 0;
 }
 
 p {
